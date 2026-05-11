@@ -1,6 +1,5 @@
 .home-page {
   width: 100%;
-  overflow-x: hidden;
 }
 
 /* Top Bar */
@@ -41,19 +40,7 @@
   color: var(--primary-green);
 }
 
-/* Navigation */
-.navbar {
-  background: white;
-  padding: 15px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 4px solid var(--primary-green);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+
 
 .navbar-logo-img {
   height: 50px;
@@ -1008,128 +995,7 @@
 }
 
 /* Footer Section */
-.footer {
-  background-color: #0a1128;
-  color: #fff;
-  padding: 80px 5% 30px;
-}
 
-.footer-container {
-  max-width: 1250px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: 60px;
-}
-
-.footer-col h3 {
-  font-size: 20px;
-  margin-bottom: 25px;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.footer-col h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 2px;
-  background-color: var(--primary-green);
-}
-
-.footer-logo {
-  height: 60px;
-  width: auto;
-  margin-bottom: 20px;
-  object-fit: contain;
-}
-
-.footer-col p {
-  color: #aaa;
-  line-height: 1.6;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
-.footer-socials {
-  display: flex;
-  gap: 15px;
-}
-
-.footer-socials a {
-  width: 35px;
-  height: 35px;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #fff;
-  transition: 0.3s;
-}
-
-.footer-socials a:hover {
-  background-color: var(--primary-green);
-  color: #0a1128;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col ul li {
-  margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-  color: #aaa;
-  font-size: 15px;
-}
-
-.footer-col ul li a:hover {
-  color: var(--primary-green);
-  padding-left: 5px;
-}
-
-.footer-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 15px;
-  color: #aaa;
-  font-size: 15px;
-}
-
-.footer-contact-item i {
-  color: var(--primary-green);
-}
-
-.footer-bottom {
-  max-width: 1250px;
-  margin: 60px auto 0;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  color: #777;
-}
-
-.footer-bottom-links {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-bottom-links a {
-  color: #777;
-}
-
-.footer-bottom-links a:hover {
-  color: var(--primary-green);
-}
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {

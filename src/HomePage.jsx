@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 const HomePage = () => {
@@ -92,6 +93,7 @@ const HomePage = () => {
             <a href="#"><i className="fab fa-facebook-f"></i></a>
             <a href="#"><i className="fab fa-linkedin-in"></i></a>
             <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -104,7 +106,7 @@ const HomePage = () => {
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
           <a href="#home" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <a href="#about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About US</a>
+          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About US</Link>
 
           <div className="nav-item dropdown">
             <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
@@ -278,7 +280,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="apart-footer">
-          <button className="apply-btn-navy">APPLY NOW</button>
+
         </div>
       </section>
       {/* Testimonials Section */}
@@ -397,11 +399,11 @@ const HomePage = () => {
           <div className="footer-col links">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
 
