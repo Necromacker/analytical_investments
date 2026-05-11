@@ -24,7 +24,7 @@ const HomePage = () => {
     {
       id: 2,
       img: "https://images.unsplash.com/photo-1581579186913-45ac3e6efe93?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "I am currently taking help from Mr. Dipin of DS consultants for my requirement. Mr. Dipin and team are extremely professional, cordial and helpful. He has a vast experience and contacts in the sector and always ready to help. I can approach him with any of my problems.",
+      quote: "I am currently taking help from Mr. Dipin of Analytical Investment for my requirement. Mr. Dipin and team are extremely professional, cordial and helpful. He has a vast experience and contacts in the sector and always ready to help. I can approach him with any of my problems.",
       name: "Anindya & Moutushi",
       title: "SENIOR MANAGER - IT FIRM - BANGALORE"
     },
@@ -38,14 +38,14 @@ const HomePage = () => {
     {
       id: 4,
       img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "Extremely professional and knowledgeable. They made the entire loan process very simple and transparent. I highly recommend DS Consultants for any financial advisory needs.",
+      quote: "Extremely professional and knowledgeable. They made the entire loan process very simple and transparent. I highly recommend Analytical Investment for any financial advisory needs.",
       name: "Sandeep Rao",
       title: "FINANCIAL ANALYST - BENGALURU"
     },
     {
       id: 5,
       img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "The team at DS Consultants is fantastic. They understood my requirements perfectly and provided the best real estate options within my budget. Their end-to-end support is truly commendable.",
+      quote: "The team at Analytical Investment is fantastic. They understood my requirements perfectly and provided the best real estate options within my budget. Their end-to-end support is truly commendable.",
       name: "Priyanka Sharma",
       title: "DIRECTOR - TECH SOLUTIONS"
     }
@@ -67,13 +67,10 @@ const HomePage = () => {
             <i className="fas fa-map-marker-alt"></i> HQ, Jayanagar, Bengaluru
           </div>
           <div className="contact-item">
-            <i className="fas fa-envelope"></i> contact@dsconsultants.org
+            <i className="fas fa-envelope"></i> ravi@analyticalinvestments.com
           </div>
           <div className="contact-item">
-            <i className="fas fa-phone-alt"></i> +91 83109 79804
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-user-circle"></i> About Us
+            <i className="fas fa-phone-alt"></i> (+91) 831 731 8136
           </div>
         </div>
         <div className="top-bar-right">
@@ -88,7 +85,7 @@ const HomePage = () => {
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-logo">
-          <span className="logo-text">DS <span className="gold">CONSULTANTS</span></span>
+          <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
         </div>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -120,10 +117,10 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Real Estate Advisory</h1>
-          <div className="hero-divider"></div>
-          <p>Expert guidance for smart real estate decisions</p>
-          <button className="apply-btn">Apply Now</button>
+          <h1>Analytical Investment</h1>
+
+          <p>Reducing interest rate on your existing loan</p>
+          <button className="apply-btn">Contact us</button>
         </div>
       </section>
 
@@ -134,21 +131,21 @@ const HomePage = () => {
             <div className="image-card">
               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Consultant" />
               <div className="image-caption">
-                <h3>Your All-in-One Financial & Real Estate Advisory Partner</h3>
+                <h3>Your All-in-One Banking, Investment Partner</h3>
               </div>
             </div>
           </div>
           <div className="about-right">
             <span className="welcome-tag">WELCOME TO</span>
-            <h2 className="about-title">DS Consultants</h2>
+            <h2 className="about-title">Analytical Investment</h2>
             <div className="title-underline"></div>
-            <h4 className="about-subtitle">Your Trusted Partner for Financial and Real Estate Solutions</h4>
+            <h4 className="about-subtitle">Your Trusted Partner for Banking, Investment and Real Estate Solutions</h4>
             <div className="about-text">
               <p>
-                <strong>DS Consultants</strong> is a trusted name in financial and real estate advisory with over 25 years of industry expertise. We help individuals, families, and businesses make informed decisions across home loans, insurance, wealth management, and property investments.
+                <strong>Analytical Investment</strong> provides sound solutions in banking, investment, and real estate. We specialize in securing various loans at the lowest possible interest rates, even for existing ones, through our partnerships with over 120+ leading banks.
               </p>
               <p>
-                Our goal is simple — to offer honest guidance, hassle-free processes, and solutions tailored to your unique needs.
+                From wealth management services like insurance and mutual funds to comprehensive real estate advisory for buying, selling, or renting properties, we offer end-to-end support tailored to the needs of individuals and businesses.
               </p>
             </div>
           </div>
@@ -267,7 +264,7 @@ const HomePage = () => {
 
           <div className="apart-center">
             <div className="apart-logo-box">
-              <img src="https://img.freepik.com/free-vector/home-real-estate-logo-template_23-2148206195.jpg" alt="DS Consultants" />
+              <img src="/Final Ai LOGO.png" alt="Analytical Investment" />
             </div>
           </div>
 
@@ -339,7 +336,7 @@ const HomePage = () => {
       <section className="cta-section">
         <div className="cta-content">
           <h2>Ready to Achieve Your Financial and Real Estate Goals?</h2>
-          <p>Contact DS Consultants Today and let our experts guide you toward smarter, more confident decisions.</p>
+          <p>Contact Analytical Investment Today and let our experts guide you toward smarter, more confident decisions.</p>
           <div className="cta-btns">
             <button className="cta-btn gold">Contact Us</button>
             <button className="cta-btn outline">Learn More</button>
@@ -367,7 +364,7 @@ const HomePage = () => {
           <div className="location-right">
             <h2 className="location-title">OUR OFFICE LOCATION</h2>
             <p className="location-address">
-              DS CONSULTANTS, C/O WORK DISTRICT, #45, 46 (NEW NO: 14) BLN ARCADE, 7TH B MAIN ROAD, 4TH BLOCK JAYANAGAR, BENGALURU-560011
+              ANALYTICAL INVESTMENT, C/O WORK DISTRICT, #45, 46 (NEW NO: 14) BLN ARCADE, 7TH B MAIN ROAD, 4TH BLOCK JAYANAGAR, BENGALURU-560011
             </p>
             <div className="location-socials">
               <a href="#" className="social-box fb"><i className="fab fa-facebook-f"></i></a>
@@ -383,8 +380,8 @@ const HomePage = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-col about">
-            <img src="https://img.freepik.com/free-vector/home-real-estate-logo-template_23-2148206195.jpg" alt="DS Consultants" className="footer-logo" />
-            <p>DS Consultants is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
+            <img src="/Final Ai LOGO.png" alt="Analytical Investment" className="footer-logo" />
+            <p>Analytical Investment is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
             <div className="footer-socials">
               <a href="#"><i className="fab fa-facebook-f"></i></a>
               <a href="#"><i className="fab fa-linkedin-in"></i></a>
@@ -423,17 +420,17 @@ const HomePage = () => {
             </div>
             <div className="footer-contact-item">
               <i className="fas fa-envelope"></i>
-              <span>contact@dsconsultants.org</span>
+              <span>ravi@analyticalinvestments.com</span>
             </div>
             <div className="footer-contact-item">
               <i className="fas fa-phone-alt"></i>
-              <span>+91 83109 79804</span>
+              <span>(+91) 831 731 8136</span>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} DS Consultants. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Analytical Investment. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
@@ -441,7 +438,7 @@ const HomePage = () => {
         </div>
       </footer>
 
-      <a href="https://wa.me/918310979804" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/918317318136" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i className="fab fa-whatsapp"></i>
       </a>
     </div>
