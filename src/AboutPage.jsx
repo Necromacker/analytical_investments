@@ -55,7 +55,7 @@ const AboutPage = () => {
               Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
             </div>
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
+              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
               <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
               <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             </div>
@@ -220,7 +220,7 @@ const AboutPage = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-col about">
-            <img src="/Final Ai LOGO.png" alt="Analytical Investment" className="footer-logo" />
+            <img src="/LOGO.png" alt="Analytical Investment" className="footer-logo" />
             <p>Analytical Investment is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
             <div className="footer-socials">
               <a href="#"><i className="fab fa-facebook-f"></i></a>

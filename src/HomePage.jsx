@@ -113,7 +113,7 @@ const HomePage = () => {
               Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
             </div>
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <a href="#insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</a>
+              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
               <a href="#mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</a>
               <a href="#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</a>
             </div>
@@ -260,7 +260,7 @@ const HomePage = () => {
 
           <div className="apart-center">
             <div className="apart-logo-box">
-              <img src="/Final Ai LOGO.png" alt="Analytical Investment" />
+              <img src="/LOGO.png" alt="Analytical Investment" />
             </div>
           </div>
 
@@ -386,7 +386,7 @@ const HomePage = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-col about">
-            <img src="/Final Ai LOGO.png" alt="Analytical Investment" className="footer-logo" />
+            <img src="/LOGO.png" alt="Analytical Investment" className="footer-logo" />
             <p>Analytical Investment is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
             <div className="footer-socials">
               <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -411,7 +411,7 @@ const HomePage = () => {
             <h3>Our Services</h3>
             <ul>
               <li><a href="#">Loan Solutions</a></li>
-              <li><a href="#">Insurance Services</a></li>
+              <li><Link to="/insurance">Insurance Services</Link></li>
               <li><a href="#">Investment Solutions</a></li>
               <li><a href="#">Wealth Management</a></li>
               <li><a href="#">Real Estate Advisory</a></li>
