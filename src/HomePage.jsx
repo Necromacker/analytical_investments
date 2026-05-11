@@ -16,38 +16,52 @@ const HomePage = () => {
   const testimonials = [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "Excellent customer service. Highly recommend for a professional and trustworthy experience.",
-      name: "Dawn Paul",
-      title: "BUSINESS SYSTEMS MANAGER - MEZZAN HOLDING CO. - KUWAIT"
+      name: "Sathish Narayanan",
+      quote: "Secured working capital loan with good options & regular communication (Thanks Princy!) Analytical Investment reached out to multiple banks to get me the best possible options for my working capital loan. They maintained regular communication throughout the process, ensuring a smooth experience.",
+      title: "Google Review",
+      stars: 5,
+      color: "#e91e63"
     },
     {
       id: 2,
-      img: "https://images.unsplash.com/photo-1581579186913-45ac3e6efe93?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "I am currently taking help from Mr. Dipin of Analytical Investment for my requirement. Mr. Dipin and team are extremely professional, cordial and helpful. He has a vast experience and contacts in the sector and always ready to help. I can approach him with any of my problems.",
-      name: "Anindya & Moutushi",
-      title: "SENIOR MANAGER - IT FIRM - BANGALORE"
+      name: "Saleth Premson",
+      quote: "Mr. Vaseem's in-depth knowledge and guidance made the home loan transfer process incredibly easy for me. Analytical Investment' commitment to personalized service ensured all my questions and concerns were addressed promptly.",
+      title: "Google Review",
+      stars: 5,
+      color: "#4caf50"
     },
     {
       id: 3,
-      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "Mr. Dipin, I must commend you for the exceptional service and support you offered throughout my house acquisition. Your efforts greatly contributed to a seamless, effortless, and stress-free process. Based on this experience, I have no doubt that your new enterprise will achieve tremendous success.",
-      name: "Vipin E",
-      title: "PROJECT MANAGER - MINDTECK - BANGALORE"
+      name: "Atul Singh",
+      quote: "I recommend Analytical Investment for my hassle-free home loan for resale. They supported me throughout the home loan process, from application to disbursement. They protected me from unnecessary expenses and secured a competitive interest rate.",
+      title: "Google Review",
+      stars: 5,
+      color: "#03a9f4"
     },
     {
       id: 4,
-      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "Extremely professional and knowledgeable. They made the entire loan process very simple and transparent. I highly recommend Analytical Investment for any financial advisory needs.",
-      name: "Sandeep Rao",
-      title: "FINANCIAL ANALYST - BENGALURU"
+      name: "Harish Reddy",
+      quote: "Their experience and knowledge of the loan process allowed me to get my loan application approved quickly and efficiently. I only needed to be involved in minimal steps like signing documents.",
+      title: "Google Review",
+      stars: 5,
+      color: "#ff5722"
     },
     {
       id: 5,
-      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      quote: "The team at Analytical Investment is fantastic. They understood my requirements perfectly and provided the best real estate options within my budget. Their end-to-end support is truly commendable.",
-      name: "Priyanka Sharma",
-      title: "DIRECTOR - TECH SOLUTIONS"
+      name: "Manisha Shakthidhar",
+      quote: "I commend Analytical Investment' team for their excellent communication and proactive approach. Their negotiation skills secured me a loan with a significantly lower interest rate.",
+      title: "Google Review",
+      stars: 5,
+      color: "#2196f3"
+    },
+    {
+      id: 6,
+      name: "Prabhu Raj Anjanappa",
+      quote: "After facing delays and challenges with securing the desired loan amount, I found success with Analytical Investment. I particularly commend Mr. Ravindra Bhatnagar's initiative and problem-solving skills.",
+      title: "Google Review",
+      stars: 5,
+      color: "#9c27b0",
+      letter: "L"
     }
   ];
 
@@ -158,86 +172,66 @@ const HomePage = () => {
         <div className="services-container">
           <div className="service-card dark">
             <div className="service-front">
-              <i className="fas fa-university service-icon"></i>
-              <h3>LOAN SOLUTIONS</h3>
+              <i className="fas fa-file-invoice-dollar service-icon"></i>
+              <h3>CIBIL RECTIFICATION</h3>
             </div>
             <div className="service-hover">
-              <ul>
-                <li>Personal Loan</li>
-                <li>Home Loan</li>
-                <li>Business Loan</li>
-                <li>Loan Against Property</li>
-                <li>Gold Loan</li>
-              </ul>
+              <p>Correct errors on your credit report and improve your score for better financial opportunities.</p>
               <button className="learn-more">LEARN MORE</button>
             </div>
           </div>
 
           <div className="service-card gold">
             <div className="service-front">
-              <i className="fas fa-briefcase service-icon"></i>
-              <h3>INSURANCE SERVICES</h3>
+              <i className="fas fa-percentage service-icon"></i>
+              <h3>INTEREST RATE REDUCTION</h3>
             </div>
             <div className="service-hover">
-              <ul>
-                <li>Life Insurance</li>
-                <li>Health Insurance</li>
-                <li>Motor Insurance</li>
-                <li>Property Insurance</li>
-                <li>Travel Insurance</li>
-                <li>Business Insurance</li>
-              </ul>
+              <p>Lower your borrowing costs through expert negotiation, balance transfers, and refinancing strategies.</p>
               <button className="learn-more">LEARN MORE</button>
             </div>
           </div>
 
           <div className="service-card dark">
             <div className="service-front">
-              <i className="fas fa-building service-icon"></i>
-              <h3>INVESTMENT SOLUTIONS</h3>
+              <i className="fas fa-handshake service-icon"></i>
+              <h3>PRE-CLOSURE NEGO</h3>
             </div>
             <div className="service-hover">
-              <ul>
-                <li>Mutual Funds</li>
-                <li>Fixed Deposits</li>
-                <li>Stock Market</li>
-                <li>SIP</li>
-                <li>Bonds</li>
-              </ul>
+              <p>Specialized negotiation to reduce or waive pre-closure charges on your existing loans.</p>
               <button className="learn-more">LEARN MORE</button>
             </div>
           </div>
 
           <div className="service-card dark">
             <div className="service-front">
-              <i className="fas fa-money-bill-wave service-icon"></i>
-              <h3>WEALTH MANAGEMENT SERVICES</h3>
+              <i className="fas fa-calculator service-icon"></i>
+              <h3>SAVING CALCULATION</h3>
             </div>
             <div className="service-hover">
-              <ul>
-                <li>Portfolio Management</li>
-                <li>Retirement Planning</li>
-                <li>Tax Planning</li>
-                <li>Estate Planning</li>
-                <li>Risk Management</li>
-              </ul>
+              <p>Precise wealth accumulation estimates using compound interest and consistent contribution planning.</p>
               <button className="learn-more">LEARN MORE</button>
             </div>
           </div>
 
           <div className="service-card gold">
             <div className="service-front">
-              <i className="fas fa-home service-icon"></i>
-              <h3>REAL ESTATE ADVISORY</h3>
+              <i className="fas fa-piggy-bank service-icon"></i>
+              <h3>TAX EFFICIENT LOANS</h3>
             </div>
             <div className="service-hover">
-              <ul>
-                <li>Property Valuation</li>
-                <li>Legal Advisory</li>
-                <li>Property Management</li>
-                <li>Buy/Sell Guidance</li>
-                <li>Investment Strategy</li>
-              </ul>
+              <p>Strategically structured loans designed to maximize tax deductions and minimize total liability.</p>
+              <button className="learn-more">LEARN MORE</button>
+            </div>
+          </div>
+
+          <div className="service-card dark">
+            <div className="service-front">
+              <i className="fas fa-layer-group service-icon"></i>
+              <h3>LOAN CONSOLIDATION</h3>
+            </div>
+            <div className="service-hover">
+              <p>Simplify your debt by combining multiple high-interest loans into a single, low-rate monthly payment.</p>
               <button className="learn-more">LEARN MORE</button>
             </div>
           </div>
@@ -245,20 +239,20 @@ const HomePage = () => {
       </section>
       {/* What Sets Us Apart Section */}
       <section className="apart-section">
-        <h2 className="apart-main-title">WHAT SETS US APART?</h2>
+        <h2 className="apart-main-title">We Have Helped More Than 10,000 Customers</h2>
         <div className="apart-container">
           <div className="apart-left">
             <div className="apart-item">
-              <h3>25+ Years of Expertise</h3>
-              <p>Decades of experience in loans, insurance, and real estate advisory.</p>
+              <h3>Scale revenue. Reduce costs.</h3>
+              <p>Loans optimized for maximum financial growth.</p>
             </div>
             <div className="apart-item">
-              <h3>Trusted by 3,000+ Clients</h3>
-              <p>Serving individuals, families, professionals, and NRIs across India and beyond.</p>
+              <h3>1 Application, 120+ Banks.</h3>
+              <p>Best loan terms. Guaranteed through our massive network.</p>
             </div>
             <div className="apart-item">
-              <h3>Multiple Services, One Platform</h3>
-              <p>Loans, insurance, investments, and property — all under one roof.</p>
+              <h3>Beyond banking.</h3>
+              <p>Analytical loan solutions tailored to your unique needs.</p>
             </div>
           </div>
 
@@ -270,16 +264,16 @@ const HomePage = () => {
 
           <div className="apart-right">
             <div className="apart-item">
-              <h3>Strong Bank Partnerships</h3>
-              <p>Access to leading banks for better rates and faster approvals.</p>
+              <h3>Your existing loan?</h3>
+              <p>We'll make it better. Direct, confident, and effective.</p>
             </div>
             <div className="apart-item">
-              <h3>End-to-End Support</h3>
-              <p>We handle everything — from paperwork to disbursement.</p>
+              <h3>Unlock hidden value.</h3>
+              <p>Secure higher amounts and lower rates with our expertise.</p>
             </div>
             <div className="apart-item">
-              <h3>Client-First Approach</h3>
-              <p>Transparent, ethical, and focused on your financial goals.</p>
+              <h3>Don't just compare. Optimize.</h3>
+              <p>Increase borrowing power and decrease interest burden.</p>
             </div>
           </div>
         </div>
@@ -308,12 +302,22 @@ const HomePage = () => {
                   key={t.id}
                   className="testimonial-card"
                 >
-                  <div className="customer-img">
-                    <img src={t.img} alt={t.name} />
+                  <div className="customer-avatar" style={{ backgroundColor: t.color }}>
+                    {t.letter || t.name.charAt(0)}
+                  </div>
+                  <div className="stars">
+                    {[...Array(t.stars)].map((_, i) => (
+                      <i key={i} className="fas fa-star"></i>
+                    ))}
                   </div>
                   <p className="quote">"{t.quote}"</p>
                   <h4 className="customer-name">{t.name}</h4>
-                  <span className="customer-title">{t.title}</span>
+                  <div className="testimonial-footer">
+                    <div className="google-badge">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" />
+                      <span>Posted On Google</span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -335,7 +339,7 @@ const HomePage = () => {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="cta-content">
-          <h2>Ready to Achieve Your Financial and Real Estate Goals?</h2>
+          <h2>Our Advisors Are Ready To Help</h2>
           <p>Contact Analytical Investment Today and let our experts guide you toward smarter, more confident decisions.</p>
           <div className="cta-btns">
             <button className="cta-btn gold">Contact Us</button>
@@ -368,7 +372,7 @@ const HomePage = () => {
             </p>
             <div className="location-socials">
               <a href="#" className="social-box fb"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="social-box x"><i className="fab fa-x-twitter"></i></a>
+              <a href="https://wa.me/918317318136" className="social-box wa"><i className="fab fa-whatsapp"></i></a>
               <a href="#" className="social-box ig"><i className="fab fa-instagram"></i></a>
               <a href="#" className="social-box li"><i className="fab fa-linkedin-in"></i></a>
             </div>
@@ -386,7 +390,7 @@ const HomePage = () => {
               <a href="#"><i className="fab fa-facebook-f"></i></a>
               <a href="#"><i className="fab fa-linkedin-in"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
 
