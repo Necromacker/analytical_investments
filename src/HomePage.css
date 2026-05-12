@@ -354,7 +354,7 @@
   justify-content: center;
   text-align: center;
   padding: 40px;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.4s, transform 0.4s; /* Synchronized with card transition */
 }
 
 .service-hover {
@@ -370,7 +370,7 @@
   padding: 30px;
   opacity: 0;
   transform: translateY(0px);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease; /* Synchronized with card transition */
   pointer-events: none;
 }
 
@@ -536,7 +536,7 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 50px;
-  align-items: center;
+  align-items: stretch; /* Stretch columns to equal height */
 }
 
 .apart-left,
@@ -545,35 +545,68 @@
   flex-direction: column;
   gap: 50px;
   text-align: left;
+  justify-content: space-between; /* Ensure side pointers also spread evenly if needed */
 }
 
-.apart-item h3 {
-  font-size: 26px;
-  color: var(--primary-blue);
-  margin-bottom: 12px;
-  font-weight: 800;
+.apart-center {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align top and bottom items to column edges */
+  gap: 20px;
 }
 
-.apart-item p {
-  font-size: 17px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.apart-logo-box {
-  background-color: white;
-  padding: 50px;
-  border-radius: 15px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+.apart-image-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.apart-logo-box img {
+.apart-image-card.top .apart-img {
+  height: 100px;
+  /* Reduced height for top image */
+}
+
+.apart-image-card.bottom .apart-img {
+  height: 350px;
+  /* Keeping original height */
+}
+
+.apart-img {
   width: 100%;
-  max-width: 380px;
-  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.apart-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--primary-green);
+  transition: 0.3s;
+}
+
+.apart-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.apart-item h3 {
+  font-size: 22px;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.apart-item p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
 }
 
 .apart-footer {

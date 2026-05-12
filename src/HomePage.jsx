@@ -241,7 +241,7 @@ const HomePage = () => {
       </section>
       {/* What Sets Us Apart Section */}
       <section className="apart-section">
-        <h2 className="apart-main-title">We Have Helped More Than 10,000 Customers</h2>
+        <h2 className="apart-main-title">WE HAVE HELPED MORE THAN 10,000 CUSTOMERS</h2>
         <div className="apart-container">
           <div className="apart-left">
             <div className="apart-item">
@@ -259,8 +259,11 @@ const HomePage = () => {
           </div>
 
           <div className="apart-center">
-            <div className="apart-logo-box">
-              <img src="/LOGO.png" alt="Analytical Investment" />
+            <div className="apart-image-card top">
+              <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=800&q=80" alt="Consultation" className="apart-img" />
+            </div>
+            <div className="apart-image-card bottom">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Customer Success" className="apart-img" />
             </div>
           </div>
 
@@ -278,9 +281,6 @@ const HomePage = () => {
               <p>Increase borrowing power and decrease interest burden.</p>
             </div>
           </div>
-        </div>
-        <div className="apart-footer">
-
         </div>
       </section>
       {/* Testimonials Section */}
