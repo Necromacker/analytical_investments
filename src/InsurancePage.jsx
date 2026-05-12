@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './InsurancePage.css';
 
 const InsurancePage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleCardClick = (type) => {
+    navigate(`/insurance/${type}`);
+  };
 
   return (
     <div className="insurance-page">
@@ -86,35 +91,29 @@ const InsurancePage = () => {
         <div className="container">
           <h2 className="section-title">Types of Insurance We Offer</h2>
           <div className="insurance-grid">
-            <div className="ins-card">
+            <div className="ins-card" onClick={() => handleCardClick('motor-insurance')} style={{ cursor: 'pointer' }}>
+              <div className="ins-icon"><i className="fas fa-car"></i></div>
+              <h3>Motor Insurance</h3>
+            </div>
+            <div className="ins-card" onClick={() => handleCardClick('health-insurance')} style={{ cursor: 'pointer' }}>
               <div className="ins-icon"><i className="fas fa-heartbeat"></i></div>
               <h3>Health Insurance</h3>
-              <p>Individual and family plans providing extensive coverage for medical emergencies and routine checkups.</p>
             </div>
-            <div className="ins-card">
-              <div className="ins-icon"><i className="fas fa-shield-alt"></i></div>
-              <h3>Life Insurance</h3>
-              <p>Secure your family's financial future with term life, whole life, and endowment policies.</p>
-            </div>
-            <div className="ins-card">
-              <div className="ins-icon"><i className="fas fa-car"></i></div>
-              <h3>General Insurance</h3>
-              <p>Protect your motor vehicles, home, and property from unforeseen damages and liabilities.</p>
-            </div>
-            <div className="ins-card">
-              <div className="ins-icon"><i className="fas fa-briefcase"></i></div>
-              <h3>Business Insurance</h3>
-              <p>Bespoke solutions for MSMEs and corporate entities to mitigate operational and financial risks.</p>
-            </div>
-            <div className="ins-card">
-              <div className="ins-icon"><i className="fas fa-plane-departure"></i></div>
+            <div className="ins-card" onClick={() => handleCardClick('travel-insurance')} style={{ cursor: 'pointer' }}>
+              <div className="ins-icon"><i className="fas fa-plane"></i></div>
               <h3>Travel Insurance</h3>
-              <p>Worry-free international and domestic travel with coverage for flight delays, medical issues, and lost baggage.</p>
             </div>
-            <div className="ins-card">
-              <div className="ins-icon"><i className="fas fa-chart-line"></i></div>
-              <h3>Investment Linked</h3>
-              <p>Insurance products that offer both protection and a path to wealth creation through strategic market exposure.</p>
+            <div className="ins-card" onClick={() => handleCardClick('home-property-insurance')} style={{ cursor: 'pointer' }}>
+              <div className="ins-icon"><i className="fas fa-home"></i></div>
+              <h3>Home & Property Insurance</h3>
+            </div>
+            <div className="ins-card" onClick={() => handleCardClick('business-commercial-insurance')} style={{ cursor: 'pointer' }}>
+              <div className="ins-icon"><i className="fas fa-building"></i></div>
+              <h3>Business / Commercial Insurance</h3>
+            </div>
+            <div className="ins-card" onClick={() => handleCardClick('miscellaneous-insurance')} style={{ cursor: 'pointer' }}>
+              <div className="ins-icon"><i className="fas fa-mobile-alt"></i></div>
+              <h3>Miscellaneous Insurance</h3>
             </div>
           </div>
         </div>
