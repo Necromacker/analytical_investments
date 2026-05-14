@@ -57,7 +57,9 @@ const AboutPage = () => {
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
               <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
               <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
-              <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link to="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link to="/without-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Without Collateral</Link>
+              <Link to="/with-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>With Collateral</Link>
             </div>
           </div>
 
@@ -235,7 +237,7 @@ const AboutPage = () => {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><a href="/#services">Services</a></li>
+              <li><Link to="/services">Services</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
               <li><a href="/#contact">Contact Us</a></li>
             </ul>
@@ -244,11 +246,11 @@ const AboutPage = () => {
           <div className="footer-col services">
             <h3>Our Services</h3>
             <ul>
-              <li><a href="/#services">Loan Solutions</a></li>
+              <li><Link to="/without-collateral">Without Collateral</Link></li>
+              <li><Link to="/with-collateral">With Collateral</Link></li>
               <li><Link to="/insurance">Insurance Services</Link></li>
               <li><Link to="/mutual-funds">Mutual Funds</Link></li>
-              <li><a href="/#services">Wealth Management</a></li>
-              <li><a href="/#services">Real Estate Advisory</a></li>
+              <li><Link to="/services">Services</Link></li>
             </ul>
           </div>
 

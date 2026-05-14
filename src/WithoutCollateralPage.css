@@ -1,0 +1,102 @@
+/* Shared styles for Collateral Pages */
+.collateral-page {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.collateral-hero {
+  padding: 120px 5% 80px;
+  background: linear-gradient(135deg, #002e5b 0%, #0076c0 100%);
+  color: white;
+  text-align: center;
+}
+
+.collateral-hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.collateral-content {
+  padding: 80px 5%;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid for Without Collateral */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 5px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  border-bottom: 5px solid var(--primary-green);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 40px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.product-card h2 {
+  font-size: 26px;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.card-divider {
+  width: 40px;
+  height: 4px;
+  background-color: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+.product-tagline {
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.product-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .collateral-hero h1 {
+    font-size: 36px;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

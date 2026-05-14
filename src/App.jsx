@@ -5,6 +5,9 @@ import AboutPage from './AboutPage'
 import InsurancePage from './InsurancePage'
 import InsuranceDetail from './InsuranceDetail'
 import MutualFundsPage from './MutualFundsPage'
+import ServicesPage from './ServicesPage'
+import WithoutCollateralPage from './WithoutCollateralPage'
+import WithCollateralPage from './WithCollateralPage'
 import './App.css'
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
         <Route path="/insurance" element={<InsurancePage />} />
         <Route path="/insurance/:type" element={<InsuranceDetail />} />
         <Route path="/mutual-funds" element={<MutualFundsPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/without-collateral" element={<WithoutCollateralPage />} />
+        <Route path="/with-collateral" element={<WithCollateralPage />} />
       </Routes>
     </Router>
   )

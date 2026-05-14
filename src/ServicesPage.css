@@ -1,0 +1,153 @@
+.services-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.services-hero {
+  height: 500px;
+  background: linear-gradient(rgba(10, 17, 40, 0.8), rgba(10, 17, 40, 0.8)), 
+              url('https://images.unsplash.com/photo-1454165833767-027ffea7e77b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  text-align: center;
+  color: white;
+}
+
+.services-hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.services-subtitle {
+  font-size: 20px;
+  color: var(--primary-green);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+/* Services Grid Section */
+.services-grid-section {
+  padding: 100px 5%;
+  background-color: #f8fafc;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-detail-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 5px solid transparent;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--primary-green);
+}
+
+.service-card-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(34, 177, 76, 0.1);
+  color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  transition: 0.3s;
+}
+
+.service-detail-card:hover .service-card-icon {
+  background: var(--primary-green);
+  color: white;
+}
+
+.service-card-content h3 {
+  font-size: 24px;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.service-underline {
+  width: 40px;
+  height: 3px;
+  background: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+.service-card-content p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.services-footer-cta {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.talk-expert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.talk-expert-btn.blue {
+  background-color: var(--primary-blue);
+}
+
+.talk-expert-btn:hover {
+  background-color: #1e9a42;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(34, 177, 76, 0.4);
+}
+
+.talk-expert-btn.blue:hover {
+  background-color: #1e4d82;
+  box-shadow: 0 15px 30px rgba(46, 107, 180, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-hero-title {
+    font-size: 36px;
+  }
+  .cta-box h2 {
+    font-size: 32px;
+  }
+  .service-detail-card {
+    padding: 30px;
+  }
+}
