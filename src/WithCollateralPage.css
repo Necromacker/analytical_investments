@@ -35,7 +35,7 @@
 }
 
 .collateral-content {
-  padding: 100px 2% 100vh; /* Maximum runway */
+  padding: 100px 2% 20px; /* Removed 100vh runway */
   background-color: #0a1128; 
   background-image: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.5) 0%, #0a1128 100%);
   background-attachment: fixed; /* Keep background pinned */
@@ -51,7 +51,7 @@
   background: white !important; 
   padding: 80px 100px; /* Increased padding to fill space */
   border-radius: 40px;
-  margin-bottom: 50vh; /* Increased scroll duration for each card */
+  margin-bottom: 30vh; /* Reduced scroll duration */
   box-shadow: 0 -20px 80px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 5vh; 
@@ -68,6 +68,10 @@
   scrollbar-color: var(--primary-green) transparent;
 }
 
+.product-section:last-child {
+  margin-bottom: 10vh; /* Just enough runway to hit top: 5vh */
+}
+
 .product-section::-webkit-scrollbar {
   width: 6px;
 }
@@ -76,14 +80,14 @@
   border-radius: 10px;
 }
 
-.product-section:nth-child(1) { z-index: 1; transform: translateY(0px) scale(0.90); }
-.product-section:nth-child(2) { z-index: 2; transform: translateY(15px) scale(0.92); }
-.product-section:nth-child(3) { z-index: 3; transform: translateY(30px) scale(0.94); }
-.product-section:nth-child(4) { z-index: 4; transform: translateY(45px) scale(0.96); }
-.product-section:nth-child(5) { z-index: 5; transform: translateY(60px) scale(0.98); }
-.product-section:nth-child(6) { z-index: 6; transform: translateY(75px) scale(1.0); }
-.product-section:nth-child(7) { z-index: 7; transform: translateY(90px) scale(1.02); }
-.product-section:nth-child(8) { z-index: 8; transform: translateY(105px) scale(1.04); }
+.product-section:nth-child(1) { z-index: 1; transform: scale(0.90); }
+.product-section:nth-child(2) { z-index: 2; transform: scale(0.92); }
+.product-section:nth-child(3) { z-index: 3; transform: scale(0.94); }
+.product-section:nth-child(4) { z-index: 4; transform: scale(0.96); }
+.product-section:nth-child(5) { z-index: 5; transform: scale(0.98); }
+.product-section:nth-child(6) { z-index: 6; transform: scale(1.0); }
+.product-section:nth-child(7) { z-index: 7; transform: scale(1.02); }
+.product-section:nth-child(8) { z-index: 8; transform: scale(1.04); }
 
 
 
