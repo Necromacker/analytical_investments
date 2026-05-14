@@ -1,0 +1,288 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './ContactPage.css';
+
+const ContactPage = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [activeFaq, setActiveFaq] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const toggleFaq = (index) => {
+    if (activeFaq === index) {
+      setActiveFaq(null);
+    } else {
+      setActiveFaq(index);
+    }
+  };
+
+  const faqs = [
+    {
+      question: "What documents are required for the loan application?",
+      answer: (
+        <ul>
+          <li>KYC'S Of Both Company and Director's</li>
+          <li>ITR'S, Computation of Income</li>
+          <li>GSTR3B</li>
+          <li>CIBIL Score</li>
+          <li>Bank Statement if Loan Taken in Other's Banks, of Both Company and Individual's.</li>
+          <li>Financials of Both Company and Individuals.</li>
+        </ul>
+      )
+    },
+    {
+      question: "Can I apply for a loan if I have existing debts?",
+      answer: "Yes, you can apply for a loan even if you have existing debts. We will evaluate your debt-to-income ratio and overall financial health to determine the best solution for you. Debt consolidation is also an option we offer to simplify your repayments."
+    },
+    {
+      question: "How can I get a loan instantly?",
+      answer: "While 'instant' depends on the type of loan, we expedite the process through digital documentation and quick verification. Unsecured personal or business loans can often be processed within 24-48 hours once all documents are submitted."
+    },
+    {
+      question: "How can you reduce the interest rate on my loan?",
+      answer: "We help reduce interest rates through negotiation with lenders, balance transfers to banks with lower rates, or by improving your CIBIL score through our rectification services."
+    },
+    {
+      question: "Are there any specific income requirements for loan?",
+      answer: "Income requirements vary by loan type and lender. Generally, for business loans, we look at your annual turnover and profitability. For individual loans, your monthly salary and existing obligations are the primary factors."
+    }
+  ];
+
+  return (
+    <div className="contact-page">
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="top-bar-left">
+          <div className="contact-item"><i className="fas fa-map-marker-alt"></i> HQ, Jayanagar, Bengaluru</div>
+          <div className="contact-item"><i className="fas fa-envelope"></i> ravi@analyticalinvestments.com</div>
+          <div className="contact-item"><i className="fas fa-phone-alt"></i> (+91) 831 731 8136</div>
+        </div>
+        <div className="top-bar-right">
+          <div className="social-links">
+            <a href="#"><i className="fab fa-facebook-f"></i></a>
+            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="nav-logo">
+          <Link to="/">
+            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
+          </Link>
+        </div>
+
+        <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
+          <Link to="/" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+
+          <div className="nav-item dropdown">
+            <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
+              Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
+            </div>
+            <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
+              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
+              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
+              <Link to="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link to="/without-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Without Collateral</Link>
+              <Link to="/with-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>With Collateral</Link>
+            </div>
+          </div>
+
+          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
+          <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+          <Link to="/contact" className="nav-item active" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+        </div>
+
+        <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <i className={mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </div>
+      </nav>
+
+      {/* Map Section */}
+      <section className="contact-map-section">
+        <div className="contact-narrow-container">
+          <div className="map-container">
+            <iframe 
+              title="Analytical Investments Office"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5447285623326!2d77.5873!3d12.93!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159048c90969%3A0xc07887e35b7501b1!2sJayanagar%2C%20Bengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1715690000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Cards Section (Now Between Map and Form) */}
+      <section className="contact-details-section">
+        <div className="contact-narrow-container">
+          <div className="info-cards-row">
+            <div className="info-card">
+              <div className="info-icon"><i className="fab fa-whatsapp"></i></div>
+              <div className="info-text">
+                <h4>WhatsApp</h4>
+                <p>(+91) 831 731 8136</p>
+              </div>
+            </div>
+            <div className="info-card">
+              <div className="info-icon"><i className="fas fa-envelope"></i></div>
+              <div className="info-text">
+                <h4>Email</h4>
+                <p>ravi@analyticalinvestments.com</p>
+              </div>
+            </div>
+            <div className="info-card">
+              <div className="info-icon"><i className="fas fa-phone-alt"></i></div>
+              <div className="info-text">
+                <h4>Phone</h4>
+                <p>(+91) 831 731 8136</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get In Touch Form Section */}
+      <section className="contact-form-section">
+        <div className="contact-narrow-container">
+          <div className="contact-form-panel">
+            <div className="form-header">
+              <h2>GET IN TOUCH</h2>
+              <div className="title-underline"></div>
+            </div>
+            <form className="get-in-touch-form">
+              <div className="form-grid">
+                <div className="form-group">
+                  <select required>
+                    <option value="" disabled selected>Select Occupation</option>
+                    <option value="salaried">Salaried</option>
+                    <option value="self-employed">Self-Employed</option>
+                    <option value="business">Business Owner</option>
+                    <option value="professional">Professional</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <input type="text" placeholder="Full Name*" required />
+                </div>
+                <div className="form-group">
+                  <input type="tel" placeholder="Phone Number*" required />
+                </div>
+                <div className="form-group">
+                  <input type="email" placeholder="Email ID*" required />
+                </div>
+                <div className="form-group">
+                  <input type="text" placeholder="Company Name" />
+                </div>
+                <div className="form-group">
+                  <input type="number" placeholder="Loan Amount Required" />
+                </div>
+                <div className="form-group full-width">
+                  <select required>
+                    <option value="" disabled selected>Select Loan/Credit Type</option>
+                    <option value="unsecured-business">Unsecured Business Loan</option>
+                    <option value="home-loan">Home Loan</option>
+                    <option value="lap">Loan Against Property</option>
+                    <option value="machinery">Machinery Finance</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="mutual-funds">Mutual Funds</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" className="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="container">
+          <div className="faq-header">
+            <h2>Frequently asked questions</h2>
+            <div className="faq-shape"></div>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq, index) => (
+              <div key={index} className={`faq-item ${activeFaq === index ? 'active' : ''}`}>
+                <div className="faq-question" onClick={() => toggleFaq(index)}>
+                  <h3>{faq.question}</h3>
+                  <i className={`fas ${activeFaq === index ? 'fa-minus' : 'fa-plus'}`}></i>
+                </div>
+                <div className="faq-answer">
+                  <div className="answer-content">
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-col about">
+            <img src="/LOGO.png" alt="Analytical Investment" className="footer-logo" />
+            <p>Analytical Investment is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
+            <div className="footer-socials">
+              <a href="#"><i className="fab fa-facebook-f"></i></a>
+              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div className="footer-col links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><a href="/#testimonials">Testimonials</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col services">
+            <h3>Our Products</h3>
+            <ul>
+              <li><Link to="/without-collateral">Without Collateral</Link></li>
+              <li><Link to="/with-collateral">With Collateral</Link></li>
+              <li><Link to="/insurance">Insurance Services</Link></li>
+              <li><Link to="/mutual-funds">Mutual Funds</Link></li>
+              <li><Link to="/services">Services</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col contact">
+            <h3>Contact Us</h3>
+            <div className="footer-contact-item"><i className="fas fa-map-marker-alt"></i> <span>HQ, Jayanagar, Bengaluru</span></div>
+            <div className="footer-contact-item"><i className="fas fa-envelope"></i> <span>ravi@analyticalinvestments.com</span></div>
+            <div className="footer-contact-item"><i className="fas fa-phone-alt"></i> <span>(+91) 831 731 8136</span></div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Analytical Investment. All Rights Reserved.</p>
+          <div className="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default ContactPage;

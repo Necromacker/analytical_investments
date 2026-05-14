@@ -125,7 +125,7 @@ const HomePage = () => {
 
           <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <a href="#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -139,7 +139,7 @@ const HomePage = () => {
           <h1>Analytical Investment</h1>
 
           <p>Reducing interest rate on your existing loan</p>
-          <button className="apply-btn">Contact us</button>
+          <Link to="/contact" className="apply-btn">Contact us</Link>
         </div>
       </section>
 
@@ -347,8 +347,8 @@ const HomePage = () => {
           <h2>Our Advisors Are Ready To Help</h2>
           <p>Contact Analytical Investment Today and let our experts guide you toward smarter, more confident decisions.</p>
           <div className="cta-btns">
-            <button className="cta-btn gold">Contact Us</button>
-            <button className="cta-btn outline">Learn More</button>
+            <Link to="/contact" className="cta-btn gold">Contact Us</Link>
+            <Link to="/about" className="cta-btn outline">Learn More</Link>
           </div>
         </div>
       </section>
@@ -407,7 +407,7 @@ const HomePage = () => {
               <li><Link to="/services">Services</Link></li>
               <li><a href="#testimonials">Testimonials</a></li>
               <li><Link to="/blog">Blog</Link></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 

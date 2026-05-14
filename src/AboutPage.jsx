@@ -65,7 +65,7 @@ const AboutPage = () => {
 
           <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -81,7 +81,7 @@ const AboutPage = () => {
           <p className="about-quote">
             We turn intelligence into impactful loan strategies powering your financial success
           </p>
-          <button className="apply-btn" onClick={() => window.location.href = '/#contact'}>Contact us</button>
+          <Link to="/contact" className="apply-btn">Contact us</Link>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ const AboutPage = () => {
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
-              <li><a href="/#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 

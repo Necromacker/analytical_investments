@@ -95,7 +95,7 @@ const ServicesPage = () => {
 
           <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -130,9 +130,9 @@ const ServicesPage = () => {
           </div>
 
           <div className="services-footer-cta">
-            <a href="https://wa.me/918317318136" className="talk-expert-btn blue" target="_blank" rel="noopener noreferrer">
+            <Link to="/contact" className="talk-expert-btn blue">
               TALK TO AN EXPERT <i className="fas fa-chevron-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -159,7 +159,7 @@ const ServicesPage = () => {
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
-              <li><a href="/#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 

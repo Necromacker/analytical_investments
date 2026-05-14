@@ -167,7 +167,7 @@ const InsuranceDetail = () => {
 
           <a href="/#emi" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</a>
           <a href="/#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact US</a>
+          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -183,9 +183,9 @@ const InsuranceDetail = () => {
         <div className="detail-hero-content">
           <h1 className="detail-title">{data.title}</h1>
           <p className="detail-subtitle">{data.subtitle}</p>
-          <button className="apply-now-btn" onClick={() => window.location.href = '/#contact'}>
+          <Link to="/contact" className="apply-now-btn">
             Apply Now
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -239,9 +239,9 @@ const InsuranceDetail = () => {
             </div>
 
             <div className="feature-cta-row">
-              <button className="contact-us-btn" onClick={() => window.location.href = '/#contact'}>
+              <Link to="/contact" className="contact-us-btn">
                 CONTACT US <i className="fas fa-chevron-right"></i>
-              </button>
+              </Link>
               <div className="feature-contact">
                 <i className="fas fa-phone-alt"></i>
                 <div className="contact-numbers">
@@ -310,7 +310,7 @@ const InsuranceDetail = () => {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
-              <li><a href="/#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 

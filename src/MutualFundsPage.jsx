@@ -63,7 +63,7 @@ const MutualFundsPage = () => {
 
           <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -75,6 +75,7 @@ const MutualFundsPage = () => {
       <section className="mf-hero">
         <div className="mf-hero-content">
           <h1 className="mf-hero-title">Mutual Funds with Purpose. Backed by Expertise.</h1>
+          <p className="mf-subtitle">Grow your wealth with professionally managed diversified portfolios.</p>
         </div>
       </section>
 
@@ -167,9 +168,9 @@ const MutualFundsPage = () => {
             <h2>Let’s Talk Investments</h2>
             <p>Have questions? Need clarity? Want to get started?</p>
             <p className="whatsapp-text">Tap the WhatsApp button and our expert will guide you from there</p>
-            <a href="https://wa.me/918317318136" className="mf-whatsapp-btn" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-whatsapp"></i> Whatsapp Now
-            </a>
+            <Link to="/contact" className="mf-whatsapp-btn">
+              Talk to our Expert
+            </Link>
           </div>
         </div>
       </section>
@@ -195,7 +196,7 @@ const MutualFundsPage = () => {
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
-              <li><a href="/#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
           <div className="footer-col services">

@@ -320,7 +320,7 @@ const BlogPage = () => {
           </div>
           <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <Link to="/blog" className="nav-item active" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
         </div>
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <i className={mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -385,7 +385,7 @@ const BlogPage = () => {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
-              <li><a href="/#contact">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
           <div className="footer-col services">

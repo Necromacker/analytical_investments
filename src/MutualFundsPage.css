@@ -23,6 +23,13 @@
   font-weight: 800;
   max-width: 900px;
   line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.mf-subtitle {
+  font-size: 18px;
+  color: var(--primary-green);
+  font-weight: 600;
 }
 
 /* Intro Section */
