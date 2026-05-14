@@ -193,7 +193,7 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
   margin-top: 60px;
   max-width: 1200px;
@@ -201,144 +201,210 @@
   margin-right: auto;
 }
 
-.team-card {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.team-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border-color: var(--primary-green);
-}
-
-.promoter-card.large {
-  max-width: 900px;
+/* NEW TEAM CARD STYLES */
+.card {
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  background: white;
+  border-radius: 32px;
+  padding: 3px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 30px -20px;
+  transition: all 0.5s ease-in-out;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  cursor: default;
+}
+
+.card .mail {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  background: transparent;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.card .mail svg {
+  stroke: var(--primary-green);
+  stroke-width: 2.5px;
+  transition: 0.3s;
+}
+
+.card .mail svg:hover {
+  stroke: var(--primary-blue);
+}
+
+.card .profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.card .profile-pic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.card .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: var(--primary-blue);
+  top: 80%;
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  padding: 20px;
   text-align: left;
 }
 
-.team-img-box {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 25px;
-  border: 4px solid var(--primary-green);
-  position: relative;
-  flex-shrink: 0;
+.card .bottom .content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-top: 40px;
 }
 
-.promoter-card.large .team-img-box {
-  width: 300px;
-  height: 300px;
-  margin: 0;
+.card:hover .bottom .content {
+  opacity: 1;
+  transition-delay: 0.4s;
 }
 
-.team-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.team-number {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: var(--primary-green);
+.card .bottom .content .name {
+  display: block;
+  font-size: 1.3rem;
   color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 800;
-  font-size: 20px;
-  z-index: 2;
+  margin-bottom: 5px;
 }
 
-.team-info h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.team-role {
+.card .bottom .content .role {
+  display: block;
+  font-size: 0.8rem;
   color: var(--primary-green);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   margin-bottom: 15px;
-  font-size: 14px;
 }
 
-.name-social-group {
+.card .bottom .content .about-me {
+  display: block;
+  font-size: 0.85rem;
+  color: #f1f5f9;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card .bottom-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 0 0 32px 32px;
+}
+
+.card .bottom-bottom .social-links-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.card .bottom-bottom .social-links-container a {
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.card .bottom-bottom .social-links-container a:hover {
+  color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.card .contact-btn-wrapper {
+  background: rgba(255, 255, 255, 0.15); /* Light color overlay */
+  padding: 6px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 15px;
+  transition: 0.3s;
 }
 
-.promoter-card.large .name-social-group {
-  justify-content: flex-start;
+.card .contact-btn-wrapper:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
-.linkedin-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  background: #0077B5;
+.card .bottom-bottom .button {
+  background: white;
+  color: var(--primary-blue);
+  border: none;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  padding: 5px 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card .bottom-bottom .button:hover {
+  background: var(--primary-green);
   color: white;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  line-height: 1;
 }
 
-.linkedin-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
+.card:hover {
+  border-top-left-radius: 55px;
 }
 
-.team-info h3 {
-  font-size: 28px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
+.card:hover .bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
-.team-bio {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #cbd5e1;
+.card:hover .profile-pic {
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 4px solid var(--primary-green);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
 }
 
-@media (max-width: 992px) {
-  .promoter-card.large {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .team-img-box {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .promoter-card.large .team-img-box {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
+.card:hover .profile-pic img {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 }
 

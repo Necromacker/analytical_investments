@@ -81,55 +81,99 @@ const AboutPage = () => {
       {/* Promoter Section */}
       <section className="team-section promoter-section" id="promoter">
         <h2 className="team-main-title">MEET OUR PROMOTER</h2>
-        <div className="team-container">
+        <div className="team-grid">
           {/* Maj Ravindra Bhatnagar */}
-          <div className="team-card promoter-card large">
-            <div className="team-img-box">
+          <div className="card">
+            <button className="mail">
+              <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </button>
+            <div className="profile-pic">
               <img src={MajImg} alt="Maj Ravindra Bhatnagar" />
             </div>
-            <div className="team-info">
-              <div className="name-social-group">
-                <h3>Maj Ravindra Bhatnagar</h3>
-                <a href="#" className="linkedin-link"><i className="fab fa-linkedin"></i></a>
+            <div className="bottom">
+              <div className="content">
+                <span className="name">Maj Ravindra Bhatnagar</span>
+                <span className="role">Founder</span>
+                <span className="about-me">
+                  Army veteran who found his calling solving financial challenges for MSMEs. Delivering bespoke debt restructuring and strategic solutions since 1994.
+                </span>
               </div>
-              <p className="team-role">Founder</p>
-              <p className="team-bio">
-                As an Army veteran, I started my firm as a wealth management practice in 1994 but soon found my calling solving the financial challenges of India's MSMEs (Rs.5Cr to 50 Cr). Through my firm, I've been able to focus on delivering bespoke debt restructuring and financial solutions that change the conversation for these businesses. I have seen their tenacity with my own eyes, and I do not think we do enough as a lender to assist them in growing responsibly by means of increasing loan sizes and reducing our rate. With a deep understanding of the sector-specific nuances, my team structures debt solutions to reduce the financial strain and provide MSMEs an open landscape for growth. Our mission is to be a catalyst, backing these companies tirelessly & enabling them in their growth journey.
-              </p>
+            </div>
+            <div className="bottom-bottom">
+              <div className="social-links-container">
+                <a href="#"><i className="fab fa-linkedin"></i></a>
+                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+              </div>
+              <div className="contact-btn-wrapper">
+                <Link to="/contact" className="button">Contact Me</Link>
+              </div>
             </div>
           </div>
 
-          <div className="team-grid">
-            {/* Keshav Gowda */}
-            <div className="team-card">
-              <div className="team-img-box">
-                <img src={KeshavImg} alt="Keshav Gowda" />
-              </div>
-              <div className="team-info">
-                <div className="name-social-group">
-                  <h3>Keshav Gowda</h3>
-                  <a href="#" className="linkedin-link"><i className="fab fa-linkedin"></i></a>
-                </div>
-                <p className="team-bio">
-                  A seasoned professional with 15+ years' experience, including 5 years in real estate. Known for expertise in loan business and financial consulting. Strong in project management, team leadership, and strategic planning.
-                </p>
+          {/* Keshav Gowda */}
+          <div className="card">
+            <button className="mail">
+              <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </button>
+            <div className="profile-pic">
+              <img src={KeshavImg} alt="Keshav Gowda" />
+            </div>
+            <div className="bottom">
+              <div className="content">
+                <span className="name">Keshav Gowda</span>
+                <span className="role">Senior Consultant</span>
+                <span className="about-me">
+                  Seasoned professional with 15+ years' experience in loan business and real estate. Expert in project management and strategic planning.
+                </span>
               </div>
             </div>
-
-            {/* Pavan Kumar k */}
-            <div className="team-card">
-              <div className="team-img-box">
-                <img src={PavanImg} alt="Pavan Kumar k" />
+            <div className="bottom-bottom">
+              <div className="social-links-container">
+                <a href="#"><i className="fab fa-linkedin"></i></a>
+                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
               </div>
-              <div className="team-info">
-                <div className="name-social-group">
-                  <h3>Pavan Kumar k</h3>
-                  <a href="#" className="linkedin-link"><i className="fab fa-linkedin"></i></a>
-                </div>
-                <p className="team-role">Marketing Head</p>
-                <p className="team-bio">
-                  Marketing Head with proven expertise in the loan and financial services industry. Skilled in lead generation, digital campaigns, and brand strategy. Experienced with Google Ads, Meta, and CRM tools like Salesforce.
-                </p>
+              <div className="contact-btn-wrapper">
+                <Link to="/contact" className="button">Contact Me</Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Pavan Kumar k */}
+          <div className="card">
+            <button className="mail">
+              <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </button>
+            <div className="profile-pic">
+              <img src={PavanImg} alt="Pavan Kumar k" />
+            </div>
+            <div className="bottom">
+              <div className="content">
+                <span className="name">Pavan Kumar k</span>
+                <span className="role">Marketing Head</span>
+                <span className="about-me">
+                  Skilled in lead generation and digital campaigns. Experienced with Google Ads, Meta, and modern CRM tools to drive brand growth.
+                </span>
+              </div>
+            </div>
+            <div className="bottom-bottom">
+              <div className="social-links-container">
+                <a href="#"><i className="fab fa-linkedin"></i></a>
+                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+              </div>
+              <div className="contact-btn-wrapper">
+                <Link to="/contact" className="button">Contact Me</Link>
               </div>
             </div>
           </div>
@@ -141,36 +185,66 @@ const AboutPage = () => {
         <h2 className="team-main-title">MEET OUR ADVISORS</h2>
         <div className="team-grid">
           {/* Adv. Ashok Nair. K */}
-          <div className="team-card">
-            <div className="team-img-box">
+          <div className="card">
+            <button className="mail">
+              <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </button>
+            <div className="profile-pic">
               <img src={AshokImg} alt="Adv. Ashok Nair. K" />
             </div>
-            <div className="team-info">
-              <div className="name-social-group">
-                <h3>Adv. Ashok Nair. K</h3>
-                <a href="#" className="linkedin-link"><i className="fab fa-linkedin"></i></a>
+            <div className="bottom">
+              <div className="content">
+                <span className="name">Adv. Ashok Nair. K</span>
+                <span className="role">Legal Advisor</span>
+                <span className="about-me">
+                  Specialist in corporate legal strategy, contract management, and GDPR compliance. Creating worry-free legal environments for businesses.
+                </span>
               </div>
-              <p className="team-role">Legal Advisor</p>
-              <p className="team-bio">
-                Transitioning from civil law to corporate legal strategy, they specialize in creating worry-free legal environments for businesses. Expertise lies in contract management, GDPR compliance, and intellectual property.
-              </p>
+            </div>
+            <div className="bottom-bottom">
+              <div className="social-links-container">
+                <a href="#"><i className="fab fa-linkedin"></i></a>
+                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+              </div>
+              <div className="contact-btn-wrapper">
+                <Link to="/contact" className="button">Contact Me</Link>
+              </div>
             </div>
           </div>
 
           {/* Suresh Kumar P */}
-          <div className="team-card">
-            <div className="team-img-box">
+          <div className="card">
+            <button className="mail">
+              <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </button>
+            <div className="profile-pic">
               <img src={SureshImg} alt="Suresh Kumar P" />
             </div>
-            <div className="team-info">
-              <div className="name-social-group">
-                <h3>Suresh Kumar P</h3>
-                <a href="#" className="linkedin-link"><i className="fab fa-linkedin"></i></a>
+            <div className="bottom">
+              <div className="content">
+                <span className="name">Suresh Kumar P</span>
+                <span className="role">Ops Excellence</span>
+                <span className="about-me">
+                  Functional leader in technology and manufacturing. Business Excellence coach focused on sustaining growth through operational frameworks.
+                </span>
               </div>
-              <p className="team-role">Growth and Operational Excellence Consultant</p>
-              <p className="team-bio">
-                An experienced Business Excellence coach and functional leader in technology, software, and manufacturing. Specialties include setting up Organizations and Operational frameworks that sustain growth.
-              </p>
+            </div>
+            <div className="bottom-bottom">
+              <div className="social-links-container">
+                <a href="#"><i className="fab fa-linkedin"></i></a>
+                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+              </div>
+              <div className="contact-btn-wrapper">
+                <Link to="/contact" className="button">Contact Me</Link>
+              </div>
             </div>
           </div>
         </div>
