@@ -68,82 +68,68 @@ const WithCollateralPage = () => {
         <div className="container">
           {/* Home Loans */}
           <div className="product-section">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-home"></i></div>
-              <h2>Home Loan Solutions</h2>
-              <div className="section-divider"></div>
-            </div>
             <div className="product-text">
-              <p className="highlight">Unlock Your Dream Home with Our Comprehensive Home Loan Solutions</p>
-              <p>Navigating the path to homeownership can be overwhelming. That’s why we offer a wide range of home loan products tailored to your unique needs. Whether you’re buying your first home, building from the ground up, or looking to renovate your current space, we’ve got you covered.</p>
+              <p className="highlight">Unlock Your Dream Home with Comprehensive Financing Solutions</p>
               
               <div className="product-sub-grid">
                 <div className="sub-item">
-                  <h4>Home Purchase Loan</h4>
-                  <p>Make your dream home a reality with competitive interest rates and flexible repayment options.</p>
+                  <h4>Home Purchase</h4>
+                  <p>Competitive rates and flexible repayment for your dream residential property.</p>
                 </div>
                 <div className="sub-item">
-                  <h4>Interior Loan</h4>
-                  <p>Transform your house into a stylish home with our interior design financing.</p>
+                  <h4>Interior & Construction</h4>
+                  <p>Finance for stylish modern interiors or building your home from the ground up.</p>
                 </div>
                 <div className="sub-item">
-                  <h4>Construction Loan</h4>
-                  <p>Build your dream house from the ground up with our construction loan.</p>
+                  <h4>Composite & NRI</h4>
+                  <p>Combined construction financing or specialized home loan solutions for NRIs.</p>
                 </div>
                 <div className="sub-item">
-                  <h4>Composite Loan</h4>
-                  <p>Combine construction and home purchase financing into one convenient package.</p>
+                  <h4>Balance Transfer</h4>
+                  <p>Lower your monthly EMIs by transferring your existing loan to our bank partners.</p>
                 </div>
                 <div className="sub-item">
-                  <h4>NRI Home Loans</h4>
-                  <p>Own a piece of your homeland with our NRI home loan solutions even while living abroad.</p>
+                  <h4>Top-Up Loan</h4>
+                  <p>Get additional funds on your existing home loan for any personal or business need.</p>
                 </div>
                 <div className="sub-item">
-                  <h4>Balance Transfer & Top-Up</h4>
-                  <p>Lower your rates or get additional funds for your needs through our specialized transfer options.</p>
+                  <h4>Plot Purchase</h4>
+                  <p>Finance for purchasing residential plots in approved layouts and developments.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Mortgage Loans */}
-          <div className="product-section alternate">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-building"></i></div>
-              <h2>Mortgage Loan (LAP)</h2>
-              <div className="section-divider"></div>
-            </div>
+          <div className="product-section">
             <div className="product-text">
-              <p className="highlight">Mortgage Loan: The Foundation of Your Dreams</p>
-              <p>A mortgage loan is a secured loan where you borrow money from a lender to purchase a property, using the property itself as collateral. It enables you to realize your aspirations of home ownership or expand your real estate portfolio.</p>
+              <p className="highlight">Mortgage Loan (LAP): The Foundation of Your Financial Dreams</p>
+              <p>A secured loan using your residential or commercial property as collateral to unlock liquid funds for your aspirations.</p>
               
-              <div className="key-takeaways">
-                <div className="takeaway-card">
-                  <h5>Secured Loans</h5>
-                  <p>Property pledged as collateral ensures lender security and better rates.</p>
-                </div>
-                <div className="takeaway-card">
-                  <h5>Long-Term</h5>
-                  <p>Typically extends over several years with manageable monthly payments.</p>
-                </div>
-                <div className="takeaway-card">
-                  <h5>Fixed/Floating</h5>
-                  <p>Choice of interest rate structures based on your financial planning.</p>
-                </div>
-              </div>
-
               <div className="product-sub-grid">
                 <div className="sub-item">
-                  <h4>Commercial Property</h4>
-                  <p>Acquire offices, shops, or warehouses to build your business empire.</p>
+                  <h4>Secured & Long-Term</h4>
+                  <p>Pledged property ensures the lowest interest rates over extended repayment tenures.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Fixed/Floating Rates</h4>
+                  <p>Choose between stable fixed rates or market-linked floating rates for your planning.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Commercial Purchase</h4>
+                  <p>Acquire offices, shops, or warehouses to expand your business empire footprint.</p>
                 </div>
                 <div className="sub-item">
                   <h4>Smart LAP</h4>
-                  <p>Leverage your property to access funds for business, education, or emergencies.</p>
+                  <p>Leverage your property value for business expansion, education, or financial emergencies.</p>
                 </div>
                 <div className="sub-item">
-                  <h4>Industrial Construction</h4>
-                  <p>Finance the construction of manufacturing units or factory facilities.</p>
+                  <h4>Industrial Refinance</h4>
+                  <p>Refinance your industrial property to gain liquidity for operational scaling.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Debt Consolidation</h4>
+                  <p>Use your property equity to pay off high-interest unsecured debts into one low EMI.</p>
                 </div>
               </div>
             </div>
@@ -151,50 +137,61 @@ const WithCollateralPage = () => {
 
           {/* Project Finance */}
           <div className="product-section">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-project-diagram"></i></div>
-              <h2>Project Finance</h2>
-              <div className="section-divider"></div>
-            </div>
             <div className="product-text">
-              <p className="highlight">Fueling Ambitious Endeavors – Turning Visions into Reality</p>
-              <p>Project finance is a specialized financing method where the lender primarily relies on the project’s projected cash flow and assets to repay the loan. This approach minimizes the sponsors’ financial risk and allows for large-scale, complex projects to be undertaken.</p>
+              <p className="highlight">Turning Large-Scale Visions into Reality Through Strategic Finance</p>
+              <p>Specialized financing relying on a project’s projected cash flow. Minimized sponsor risk for complex developments.</p>
               
-              <ul className="feature-list">
-                <li><strong>Non-Recourse:</strong> Recourse is typically limited to the project's assets and cash flow.</li>
-                <li><strong>Long-Term:</strong> Financing arrangements lasting years or even decades.</li>
-                <li><strong>Common Uses:</strong> Infrastructure (roads, bridges), Energy (renewables), and large-scale Real Estate.</li>
-              </ul>
+              <div className="product-sub-grid">
+                <div className="sub-item">
+                  <h4>Non-Recourse Finance</h4>
+                  <p>Risk is primarily limited to the project's own assets and future generated cash flow.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Infrastructure & Energy</h4>
+                  <p>Customized funding for roads, bridges, renewable energy, and large-scale utilities.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Real Estate Projects</h4>
+                  <p>Construction finance for residential townships and commercial business parks.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Risk Mitigation</h4>
+                  <p>Structured finance that incorporates insurance and hedging to protect project viability.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Working Capital Gap</h4>
+                  <p>Bridge the gap between project expenses and milestone payments with liquid cash.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Debt Syndication</h4>
+                  <p>Collaborative financing from multiple banks for extremely high-value projects.</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Machinery Finance */}
-          <div className="product-section alternate">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-cogs"></i></div>
-              <h2>Machinery Purchase Finance</h2>
-              <div className="section-divider"></div>
-            </div>
+          <div className="product-section">
             <div className="product-text">
-              <p className="highlight">Fueling Your Productivity – One Machine at a Time!</p>
-              <p>Specialized financial products designed to assist businesses in acquiring new or used machinery. It empowers companies to upgrade their production capabilities and stay competitive without depleting working capital.</p>
+              <p className="highlight">Fueling Industrial Productivity – One Machine at a Time</p>
+              <p>Acquire new or used equipment to upgrade capabilities and stay competitive without depleting capital.</p>
               
-              <div className="benefit-grid">
-                <div className="benefit-item">
-                  <i className="fas fa-check-circle"></i>
-                  <span>Preserves Cash Flow</span>
+              <div className="product-sub-grid">
+                <div className="sub-item">
+                  <h4>New Equipment</h4>
+                  <p>100% financing for the latest technology to boost your manufacturing output.</p>
                 </div>
-                <div className="benefit-item">
-                  <i className="fas fa-check-circle"></i>
-                  <span>Flexible Repayment</span>
+                <div className="sub-item">
+                  <h4>Used Machinery</h4>
+                  <p>Get funds for quality pre-owned machinery to scale affordably and efficiently.</p>
                 </div>
-                <div className="benefit-item">
-                  <i className="fas fa-check-circle"></i>
-                  <span>Tax Advantages</span>
+                <div className="sub-item">
+                  <h4>Sale & Leaseback</h4>
+                  <p>Unlock capital from your existing machinery while continuing to use it for production.</p>
                 </div>
-                <div className="benefit-item">
-                  <i className="fas fa-check-circle"></i>
-                  <span>Asset-Based Security</span>
+                <div className="sub-item">
+                  <h4>Tax Optimization</h4>
+                  <p>Benefit from depreciation and interest deductions to lower your overall tax burden.</p>
                 </div>
               </div>
             </div>
@@ -202,87 +199,111 @@ const WithCollateralPage = () => {
 
           {/* Lease Rent Discounting */}
           <div className="product-section">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-key"></i></div>
-              <h2>Lease Rent Discounting (LRD)</h2>
-              <div className="section-divider"></div>
-            </div>
             <div className="product-text">
-              <p className="highlight">Turn Future Rent into Present Cash – Unlock Your Property’s Potential!</p>
-              <p>LRD is a specialized financial product where property owners can leverage their future rental income to secure immediate funds. It involves 'selling' a portion of the future lease payments to a lender at a discounted rate in exchange for upfront cash.</p>
+              <p className="highlight">Monetize Your Future Rental Income Today for Immediate Growth</p>
+              <p>Leverage future lease payments from MNCs or reputed tenants to secure immediate lump-sum funds.</p>
               
-              <div className="lrd-features">
-                <div className="lrd-card">
-                  <p><strong>Immediate Liquidity:</strong> Access funds without selling the property.</p>
+              <div className="product-sub-grid">
+                <div className="sub-item">
+                  <h4>Immediate Liquidity</h4>
+                  <p>Access massive upfront capital without selling your high-yielding properties.</p>
                 </div>
-                <div className="lrd-card">
-                  <p><strong>Steady Cash Flow:</strong> Predictable and manageable financial planning.</p>
+                <div className="sub-item">
+                  <h4>Commercial LRD</h4>
+                  <p>Discount rentals from office spaces, tech parks, and premium retail showrooms.</p>
                 </div>
-                <div className="lrd-card">
-                  <p><strong>Predictable:</strong> Linked to long-term leases with reliable tenants.</p>
+                <div className="sub-item">
+                  <h4>Industrial LRD</h4>
+                  <p>Leverage long-term warehouse leases to fund your next business venture.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Zero Prepayment</h4>
+                  <p>Flexible terms that allow you to settle the loan as your rental income grows.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Loan Against Securities */}
-          <div className="product-section alternate">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-chart-pie"></i></div>
-              <h2>Loan Against Securities (LAS)</h2>
-              <div className="section-divider"></div>
-            </div>
+          <div className="product-section">
             <div className="product-text">
-              <p className="highlight">Unlock the Power of Your Portfolio – Cash at Your Fingertips Without Selling!</p>
-              <p>Allows individuals to leverage their existing investments in securities (stocks, mutual funds, bonds) as collateral. Access funds while preserving your portfolio’s growth potential and avoiding capital gains taxes.</p>
+              <p className="highlight">Liquidity Without Disrupting Your Portfolio’s Growth Potential</p>
+              <p>Leverage stocks, mutual funds, or bonds as collateral. Access cash quickly while maintaining your long-term growth.</p>
               
-              <ul className="las-benefits">
-                <li>Lower interest rates than unsecured loans.</li>
-                <li>Quick disbursal as collateral is readily available.</li>
-                <li>No end-use restrictions – use for any financial need.</li>
-                <li>LTV ratio typically ranging from 50% to 70%.</li>
-              </ul>
+              <div className="product-sub-grid">
+                <div className="sub-item">
+                  <h4>Instant Overdraft</h4>
+                  <p>Get a credit line against your demat holdings with zero commitment charges.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>No Capital Gains</h4>
+                  <p>Avoid selling your securities and triggering taxes; just borrow against them.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Mutual Fund LAS</h4>
+                  <p>Unlock value from both equity and debt mutual funds at very low interest rates.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Flexible Repayment</h4>
+                  <p>Pay interest only on the amount utilized, perfect for short-term cash flow gaps.</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Education Loans */}
           <div className="product-section">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-user-graduate"></i></div>
-              <h2>Education Loans (EDU)</h2>
-              <div className="section-divider"></div>
-            </div>
             <div className="product-text">
-              <div className="edu-split">
-                <div className="edu-box secured">
-                  <h4>Secured EDU Loans</h4>
-                  <p>Pledge property or deposits for lower interest rates and higher loan amounts. Best for higher education in India or abroad with longer repayment tenures.</p>
+              <p className="highlight">Investing in Your Future – Global Education Made Accessible</p>
+              <div className="product-sub-grid">
+                <div className="sub-item">
+                  <h4>Secured EDU</h4>
+                  <p>Pledge property for the lowest possible rates and high limits for Ivy League studies.</p>
                 </div>
-                <div className="edu-box unsecured">
-                  <h4>Unsecured EDU Loans</h4>
-                  <p>Based on academic potential and creditworthiness. No collateral required. Empowering students to focus on studies without arrange assets.</p>
+                <div className="sub-item">
+                  <h4>Unsecured EDU</h4>
+                  <p>Based on your GRE/GMAT scores and university ranking. No collateral required.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Living Expenses</h4>
+                  <p>Comprehensive funding that covers tuition, travel, stay, and personal equipment.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Tax Benefits</h4>
+                  <p>Avail full tax deduction on interest paid under Section 80E of the IT Act.</p>
                 </div>
               </div>
-              <p className="edu-moto"><strong>Our Moto:</strong> Fuel Your Dreams, Empower Your Future! We make education accessible with attractive rates and hassle-free processes.</p>
             </div>
           </div>
 
-          {/* Smart LAP & Drop Line OD (Summarized) */}
-          <div className="product-section alternate">
-            <div className="section-header">
-              <div className="header-icon"><i className="fas fa-lightbulb"></i></div>
-              <h2>Smart LAP & Drop Line OD</h2>
-              <div className="section-divider"></div>
-            </div>
+          {/* Smart LAP & Drop Line OD */}
+          <div className="product-section">
             <div className="product-text">
-              <div className="summary-split">
-                <div className="summary-card">
+              <p className="highlight">Modern Credit Lines – Smart Capital for Smart Businesses</p>
+              <div className="product-sub-grid">
+                <div className="sub-item">
                   <h4>Smart LAP</h4>
-                  <p>Leverage up to 70-80% of property value with minimal documentation. Ideal for business expansion or debt consolidation.</p>
+                  <p>Fast-track processing for up to 80% of property value with minimal documentation.</p>
                 </div>
-                <div className="summary-card">
+                <div className="sub-item">
                   <h4>Drop Line OD</h4>
-                  <p>A flexible business lifeline. Pay interest only on utilized amounts. Linked to your current account for seamless cash flow management.</p>
+                  <p>A hybrid credit line where the limit gradually reduces as you repay the principal.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Working Capital</h4>
+                  <p>Seamlessly manage your day-to-day business operations with a linked current account.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>No End-Use Restriction</h4>
+                  <p>Use the funds for anything from machinery purchase to managing inventory cycles.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Asset Optimization</h4>
+                  <p>Convert your idle property value into a productive engine for your business.</p>
+                </div>
+                <div className="sub-item">
+                  <h4>Low Maintenance</h4>
+                  <p>Simplified annual renewals and transparent fee structures for busy entrepreneurs.</p>
                 </div>
               </div>
             </div>
