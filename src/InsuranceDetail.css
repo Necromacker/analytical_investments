@@ -33,7 +33,7 @@
 
 
 .detail-subtitle {
-  font-size: 24px;
+  font-size: 18px;
   /* Matching Home Page p size */
   color: var(--primary-green);
   /* Matching Home Page color scheme */
@@ -76,7 +76,7 @@
 }
 
 .plans-main-title {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 800;
   color: #0a192f;
   margin-bottom: 20px;
@@ -139,7 +139,7 @@
 }
 
 .plan-card h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 15px;
 }

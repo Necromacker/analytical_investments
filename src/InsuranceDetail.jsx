@@ -10,7 +10,7 @@ const insuranceData = {
     title: 'Motor Insurance',
     subtitle: 'Protection against accident, theft, and third-party liabilities.',
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    illustration: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Private Car', desc: 'Comprehensive protection for your personal automobile.', icon: 'fa-car', color: 'dark' },
       { title: 'Two-Wheeler', desc: 'Secure coverage for your bikes and scooters.', icon: 'fa-motorcycle', color: 'gold' },
@@ -26,7 +26,7 @@ const insuranceData = {
     title: 'Health Insurance',
     subtitle: 'Cover medical emergencies & hospitalisation costs.',
     image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+    illustration: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Individual Health', desc: 'Personalized medical coverage for a single person.', icon: 'fa-user', color: 'dark' },
       { title: 'Family Floater', desc: 'Shared sum insured for your entire family.', icon: 'fa-users', color: 'gold' },
@@ -43,7 +43,7 @@ const insuranceData = {
     title: 'Travel Insurance',
     subtitle: 'Emergency medical, baggage loss, and travel delay coverage.',
     image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80',
+    illustration: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Domestic Travel', desc: 'Protection for your trips within the country.', icon: 'fa-map-marked-alt', color: 'dark' },
       { title: 'International Travel', desc: 'Global medical and trip protection abroad.', icon: 'fa-globe-americas', color: 'gold' },
@@ -56,7 +56,7 @@ const insuranceData = {
     title: 'Home & Property Insurance',
     subtitle: 'Secure your home, building, and valuable assets.',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    illustration: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Home Structure', desc: 'Protects the physical building of your home.', icon: 'fa-house-damage', color: 'dark' },
       { title: 'Home Contents', desc: 'Safeguards furniture, gadgets, and personal belongings.', icon: 'fa-couch', color: 'gold' },
@@ -68,10 +68,10 @@ const insuranceData = {
     ]
   },
   'business-commercial-insurance': {
-    title: 'Tailored Business & Commercial Insurance Plans For Every Stage Of Life',
+    title: 'Business & Commercial Insurance',
     subtitle: 'Protect business operations, liabilities, employees, and infrastructure.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&w=800&q=80',
+    illustration: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Marine Insurance', desc: 'Cargo and Hull protection for sea and air transit.', icon: 'fa-ship', color: 'dark' },
       { title: 'Liability Insurance', desc: 'Public, Product, and Professional Indemnity cover.', icon: 'fa-balance-scale', color: 'gold' },
@@ -99,7 +99,7 @@ const insuranceData = {
     title: 'Life Insurance',
     subtitle: 'Protect what matters most and start your insurance journey today',
     image: 'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    illustration: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Savings Plans', desc: 'Savings plans offer life coverage, steady growth, guaranteed returns, and low-risk wealth building.', icon: 'fa-piggy-bank', color: 'dark' },
       { title: 'Investment Plans', desc: 'Investment plans offer life cover, flexible premiums, tax benefits, and market-linked growth.', icon: 'fa-chart-line', color: 'gold' },
@@ -171,7 +171,7 @@ const InsuranceDetail = () => {
           </div>
 
           <div className="feature-right">
-            <h2 className="feature-title">Tailored {data.title} Plans For Every Stage Of Life</h2>
+            <h2 className="feature-title">{data.title} Plans For Every Stage Of Life</h2>
             <p className="feature-desc">
               Secure your future with expert-backed insurance options—built to protect, grow, and provide peace of mind.
             </p>
