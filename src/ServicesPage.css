@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .services-hero {
-  height: 500px;
+  height: 600px;
   background: linear-gradient(rgba(10, 17, 40, 0.8), rgba(10, 17, 40, 0.8)), 
               url('https://images.unsplash.com/photo-1454165833767-027ffea7e77b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;

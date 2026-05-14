@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { blogPosts } from './blogData';
 import Footer from './Footer';
+import Navbar from './Navbar';
+import TopBar from './TopBar';
 import './BlogPage.css'; // Reusing BlogPage styles for consistency
 
 const BlogDetail = () => {
   const { id } = useParams();
   const post = blogPosts.find((p) => p.id === parseInt(id));
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -24,36 +26,10 @@ const BlogDetail = () => {
   return (
     <div className="blog-page">
        {/* Top Bar */}
-       <div className="top-bar">
-        <div className="top-bar-left">
-          <div className="contact-item"><i className="fas fa-map-marker-alt"></i> HQ, Jayanagar, Bengaluru</div>
-          <div className="contact-item"><i className="fas fa-envelope"></i> ravi@analyticalinvestments.com</div>
-          <div className="contact-item"><i className="fas fa-phone-alt"></i> (+91) 831 731 8136</div>
-        </div>
-        <div className="top-bar-right">
-          <div className="social-links">
-            <a href="https://hi-in.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/company/analytical-investments/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/analyticalinvestments/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-            <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
+       <TopBar />
 
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-logo">
-          <Link to="/">
-            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
-          </Link>
-        </div>
-        <div className="nav-links">
-          <Link to="/" className="nav-item">Home</Link>
-          <Link to="/about" className="nav-item">About Us</Link>
-          <Link to="/blog" className="nav-item active">Blog</Link>
-          <Link to="/contact" className="nav-item">Contact Us</Link>
-        </div>
-      </nav>
+      <Navbar activePage="blog" />
 
       <section className="blog-detail-section" style={{ padding: '100px 5% 60px' }}>
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -93,10 +69,10 @@ const BlogDetail = () => {
           <div className="blog-share" style={{ marginTop: '60px', padding: '40px', background: '#f8fafc', borderRadius: '24px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--primary-blue)', marginBottom: '20px' }}>Did you find this helpful? Share it!</h3>
             <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
-                <a href="#" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }}><i className="fab fa-facebook-f"></i></a>
-                <a href="#" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }}><i className="fab fa-linkedin-in"></i></a>
-                <a href="#" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }}><i className="fab fa-twitter"></i></a>
-                <a href="#" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }}><i className="fab fa-whatsapp"></i></a>
+                <a href="https://hi-in.facebook.com/analyticalinvestment" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/analytical-investments/" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments/" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
         </div>

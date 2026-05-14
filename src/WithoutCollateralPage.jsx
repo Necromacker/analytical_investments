@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './WithoutCollateralPage.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
+import TopBar from './TopBar';
 
 const WithoutCollateralPage = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -53,56 +53,10 @@ const WithoutCollateralPage = () => {
   return (
     <div className="collateral-page without-collateral">
       {/* Top Bar */}
-      <div className="top-bar">
-        <div className="top-bar-left">
-          <div className="contact-item"><i className="fas fa-map-marker-alt"></i> HQ, Jayanagar, Bengaluru</div>
-          <div className="contact-item"><i className="fas fa-envelope"></i> ravi@analyticalinvestments.com</div>
-          <div className="contact-item"><i className="fas fa-phone-alt"></i> (+91) 831 731 8136</div>
-        </div>
-        <div className="top-bar-right">
-          <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
+      <TopBar />
 
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-logo">
-          <Link to="/">
-            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
-          </Link>
-        </div>
-
-        <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <Link to="/" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-
-          <div className="nav-item dropdown">
-            <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
-              Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
-            </div>
-            <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
-              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
-              <Link to="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-              <Link to="/without-collateral" className="dropdown-item active" onClick={() => setMobileMenuOpen(false)}>Without Collateral</Link>
-              <Link to="/with-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>With Collateral</Link>
-            </div>
-          </div>
-
-          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
-          <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
-        </div>
-
-        <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          <i className={mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
-        </div>
-      </nav>
+      <Navbar activePage="products" />
 
       <header className="collateral-hero">
         <div className="container">

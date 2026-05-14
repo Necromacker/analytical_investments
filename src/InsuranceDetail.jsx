@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './InsuranceDetail.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
+import TopBar from './TopBar';
 
 const insuranceData = {
   'motor-insurance': {
@@ -23,8 +25,8 @@ const insuranceData = {
   'health-insurance': {
     title: 'Health Insurance',
     subtitle: 'Cover medical emergencies & hospitalisation costs.',
-    image: 'https://images.unsplash.com/photo-1505751172107-42c16a4f1ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80',
+    illustration: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Individual Health', desc: 'Personalized medical coverage for a single person.', icon: 'fa-user', color: 'dark' },
       { title: 'Family Floater', desc: 'Shared sum insured for your entire family.', icon: 'fa-users', color: 'gold' },
@@ -40,8 +42,8 @@ const insuranceData = {
   'travel-insurance': {
     title: 'Travel Insurance',
     subtitle: 'Emergency medical, baggage loss, and travel delay coverage.',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1920&q=80',
+    illustration: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Domestic Travel', desc: 'Protection for your trips within the country.', icon: 'fa-map-marked-alt', color: 'dark' },
       { title: 'International Travel', desc: 'Global medical and trip protection abroad.', icon: 'fa-globe-americas', color: 'gold' },
@@ -66,10 +68,10 @@ const insuranceData = {
     ]
   },
   'business-commercial-insurance': {
-    title: 'Business & Commercial Insurance',
+    title: 'Tailored Business & Commercial Insurance Plans For Every Stage Of Life',
     subtitle: 'Protect business operations, liabilities, employees, and infrastructure.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-    illustration: 'https://images.unsplash.com/photo-1454165833767-027ffea7e77b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80',
+    illustration: 'https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Marine Insurance', desc: 'Cargo and Hull protection for sea and air transit.', icon: 'fa-ship', color: 'dark' },
       { title: 'Liability Insurance', desc: 'Public, Product, and Professional Indemnity cover.', icon: 'fa-balance-scale', color: 'gold' },
@@ -83,7 +85,7 @@ const insuranceData = {
   'miscellaneous-insurance': {
     title: 'Miscellaneous Insurance',
     subtitle: 'Coverage for lifestyle, valuables, events, and special categories.',
-    image: 'https://images.unsplash.com/photo-1454165833767-027ffea7e77b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80',
     illustration: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     plans: [
       { title: 'Mobile & Gadget', desc: 'Protection against accidental and liquid damage.', icon: 'fa-mobile-alt', color: 'dark' },
@@ -108,73 +110,19 @@ const insuranceData = {
 
 const InsuranceDetail = () => {
   const { type } = useParams();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
   const data = insuranceData[type] || insuranceData['life-insurance'];
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [type]);
 
   return (
     <div className="insurance-detail-page">
       {/* Top Bar */}
-      <div className="top-bar">
-        <div className="top-bar-left">
-          <div className="contact-item">
-            <i className="fas fa-map-marker-alt"></i> HQ, Jayanagar, Bengaluru
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-envelope"></i> ravi@analyticalinvestments.com
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-phone-alt"></i> (+91) 831 731 8136
-          </div>
-        </div>
-        <div className="top-bar-right">
-          <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
+      <TopBar />
 
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-logo">
-          <Link to="/">
-            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
-          </Link>
-        </div>
-
-        <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <Link to="/" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-
-          <div className="nav-item dropdown">
-            <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
-              Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
-            </div>
-            <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
-              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
-              <Link to="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-              <Link to="/without-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Without Collateral</Link>
-              <Link to="/with-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>With Collateral</Link>
-            </div>
-          </div>
-
-          <a href="/#emi" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</a>
-          <a href="/#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
-        </div>
-
-        <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          <i className={mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
-        </div>
-      </nav>
+      <Navbar activePage="insurance" />
 
       {/* Dynamic Hero Section matching the home page style */}
       <section
@@ -262,10 +210,10 @@ const InsuranceDetail = () => {
               Plan today for a worry-free tomorrow — explore {data.title} solutions with us!
             </h2>
             <div className="plan-today-socials">
-              <a href="#" className="social-circle"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="social-circle"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" className="social-circle"><i className="fab fa-instagram"></i></a>
-              <a href="https://wa.me/918317318136" className="social-circle"><i className="fab fa-whatsapp"></i></a>
+              <a href="https://hi-in.facebook.com/analyticalinvestment" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/company/analytical-investments/" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/analyticalinvestments/" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
 

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Footer from './Footer';
+import Navbar from './Navbar';
+import TopBar from './TopBar';
 
 const HomePage = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
 
   React.useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
@@ -77,62 +77,10 @@ const HomePage = () => {
   return (
     <div className="home-page">
       {/* Top Bar */}
-      <div className="top-bar">
-        <div className="top-bar-left">
-          <div className="contact-item">
-            <i className="fas fa-map-marker-alt"></i> HQ, Jayanagar, Bengaluru
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-envelope"></i> ravi@analyticalinvestments.com
-          </div>
-          <div className="contact-item">
-            <i className="fas fa-phone-alt"></i> (+91) 831 731 8136
-          </div>
-        </div>
-        <div className="top-bar-right">
-          <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
+      <TopBar />
 
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-logo">
-          <Link to="/">
-            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
-          </Link>
-        </div>
-
-        <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <a href="#home" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-
-          <div className="nav-item dropdown">
-            <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
-              Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
-            </div>
-            <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
-              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
-              <Link to="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-              <Link to="/without-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Without Collateral</Link>
-              <Link to="/with-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>With Collateral</Link>
-            </div>
-          </div>
-
-          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
-          <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <Link to="/contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
-        </div>
-
-        <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          <i className={mobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
-        </div>
-      </nav>
+      <Navbar activePage="home" />
 
       {/* Hero Section */}
       <section className="hero">
@@ -149,7 +97,7 @@ const HomePage = () => {
         <div className="about-container">
           <div className="about-left">
             <div className="image-card">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Consultant" />
+              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" alt="Investment Partner" />
               <div className="image-caption">
                 <h3>Your All-in-One Banking, Investment Partner</h3>
               </div>
@@ -349,7 +297,7 @@ const HomePage = () => {
           <p>Contact Analytical Investment Today and let our experts guide you toward smarter, more confident decisions.</p>
           <div className="cta-btns">
             <Link to="/contact" className="cta-btn gold">Contact Us</Link>
-            <Link to="/about" className="cta-btn outline">Learn More</Link>
+            <Link to="/about#promoter" className="cta-btn outline">Learn More</Link>
           </div>
         </div>
       </section>
@@ -377,10 +325,10 @@ const HomePage = () => {
               ANALYTICAL INVESTMENT, C/O WORK DISTRICT, #45, 46 (NEW NO: 14) BLN ARCADE, 7TH B MAIN ROAD, 4TH BLOCK JAYANAGAR, BENGALURU-560011
             </p>
             <div className="location-socials">
-              <a href="#" className="social-box fb"><i className="fab fa-facebook-f"></i></a>
-              <a href="https://wa.me/918317318136" className="social-box wa"><i className="fab fa-whatsapp"></i></a>
-              <a href="#" className="social-box ig"><i className="fab fa-instagram"></i></a>
-              <a href="#" className="social-box li"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://hi-in.facebook.com/analyticalinvestment" className="social-box fb" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/company/analytical-investments/" className="social-box li" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/analyticalinvestments/" className="social-box ig" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" className="social-box wa" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
         </div>
@@ -388,7 +336,7 @@ const HomePage = () => {
 
       <Footer />
 
-      <a href="https://wa.me/918317318136" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
+      <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i className="fab fa-whatsapp"></i>
       </a>
     </div>

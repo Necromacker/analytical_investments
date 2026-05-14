@@ -45,7 +45,7 @@ export const blogPosts = [
     title: "Marine Risk: Protecting the Vessel and the Cargo",
     date: "December 29, 2025",
     readTime: "1 minute read",
-    image: "https://images.unsplash.com/photo-1494412574743-019475224a46?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=800&q=80",
     content: "The vessel is the business before the cargo ever moves. When people talk about marine risk, the focus is often on goods in transit. But the real exposure starts with the vessel itself. A ship is not just a mode of transport; it's a massive capital asset. Protecting both the hull and the cargo is vital for any maritime trade operation."
   },
   {
@@ -77,7 +77,7 @@ export const blogPosts = [
     title: "Insurance Is a Discipline, Not a Deadline",
     date: "December 18, 2025",
     readTime: "1 minute read",
-    image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
     content: "Many people say they’ll buy insurance later, when income grows or life feels more settled. But time doesn’t wait for readiness, and neither do premiums. The earlier you start, the more room you give your future. Approvals come easier, and premiums are significantly lower when you are younger and healthier."
   },
   {
@@ -117,7 +117,7 @@ export const blogPosts = [
     title: "Why More Businesses Are Choosing NBFCs",
     date: "November 22, 2025",
     readTime: "1 minute read",
-    image: "https://images.unsplash.com/photo-1512428559083-a401c33c2b55?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     content: "More businesses are choosing NBFCs — and it’s not because they enjoy paying a higher rate. It’s because timing, flexibility, and practicality matter more than a marginal saving. NBFCs step in where traditional frameworks slow down, offering customized solutions that match the dynamic needs of modern entrepreneurs."
   },
   {
@@ -125,7 +125,7 @@ export const blogPosts = [
     title: "Banks vs NBFCs: The Real Difference",
     date: "November 20, 2025",
     readTime: "1 minute read",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=800&q=80",
     content: "People often assume the only difference between banks and NBFCs is the interest rate. It’s not. The real difference shows up in the experience. Banks move with caution. Their valuations are conservative, their documentation asks are rigid. NBFCs, while often pricier, provide the speed and flexibility that can be the difference between capturing an opportunity and missing it."
   },
   {
@@ -197,7 +197,7 @@ export const blogPosts = [
     title: "Simplified Success: Efficiency Wins",
     date: "October 28, 2025",
     readTime: "1 minute read",
-    image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     content: "The simplest situations can sometimes say the most. A customer who had everything in order, including flawless paperwork, decided to pass through us instead. Why? Because efficiency in the loan industry matters. We saved them weeks of back-and-forth, getting them the funds they needed with zero friction."
   },
   {
@@ -229,7 +229,7 @@ export const blogPosts = [
     title: "Not Every Victory is a Sanction: Trust Matters",
     date: "September 29, 2025",
     readTime: "1 minute read",
-    image: "https://images.unsplash.com/photo-1556761175-5973eb0732da?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
     content: "One of a devoted businessman’s three mortgaged properties needed to be released. His bank declined. We intervened, negotiated a better agreement, released the property, and provided an additional INR 3 crore in funding to fuel his expansion."
   },
   {
