@@ -35,10 +35,8 @@
 }
 
 .collateral-content {
-  padding: 100px 2% 20px; /* Removed 100vh runway */
-  background-color: #0a1128; 
-  background-image: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.5) 0%, #0a1128 100%);
-  background-attachment: fixed; /* Keep background pinned */
+  padding: 100px 2%;
+  background-color: #ffffff;
   perspective: 2000px;
 }
 
@@ -49,10 +47,10 @@
 
 .product-section {
   background: white !important; 
-  padding: 80px 100px; /* Increased padding to fill space */
+  padding: 80px 100px;
   border-radius: 40px;
-  margin-bottom: 30vh; /* Reduced scroll duration */
-  box-shadow: 0 -20px 80px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30vh;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
   position: sticky;
   top: 5vh; 
   height: 90vh; 
@@ -63,13 +61,13 @@
   align-items: flex-start; 
   overflow-y: auto; 
   transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   scrollbar-width: thin;
   scrollbar-color: var(--primary-green) transparent;
 }
 
 .product-section:last-child {
-  margin-bottom: 10vh; /* Just enough runway to hit top: 5vh */
+  margin-bottom: 25vh;
 }
 
 .product-section::-webkit-scrollbar {

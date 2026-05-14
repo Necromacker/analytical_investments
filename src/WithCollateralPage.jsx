@@ -54,8 +54,8 @@ const WithCollateralPage = () => {
             </div>
           </div>
 
-          <a href="/#emi" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</a>
-          <a href="/#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
+          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
+          <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
           <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
         </div>
 
@@ -336,6 +336,7 @@ const WithCollateralPage = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
               <li><a href="/#contact">Contact Us</a></li>
             </ul>

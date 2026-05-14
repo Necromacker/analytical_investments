@@ -9,6 +9,7 @@ import ServicesPage from './ServicesPage'
 import WithoutCollateralPage from './WithoutCollateralPage'
 import WithCollateralPage from './WithCollateralPage'
 import EmiCalculatorPage from './EmiCalculatorPage'
+import BlogPage from './BlogPage'
 import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/without-collateral" element={<WithoutCollateralPage />} />
         <Route path="/with-collateral" element={<WithCollateralPage />} />
         <Route path="/emi-calculator" element={<EmiCalculatorPage />} />
+        <Route path="/blog" element={<BlogPage />} />
       </Routes>
     </Router>
   )

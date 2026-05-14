@@ -94,7 +94,7 @@ const WithoutCollateralPage = () => {
           </div>
 
           <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
-          <a href="/#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
+          <Link to="/blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
           <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
         </div>
 
@@ -144,6 +144,7 @@ const WithoutCollateralPage = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><a href="/#testimonials">Testimonials</a></li>
               <li><a href="/#contact">Contact Us</a></li>
             </ul>

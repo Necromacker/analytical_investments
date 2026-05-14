@@ -165,10 +165,11 @@
 .step-item {
   display: flex;
   gap: 25px;
-  background: #f8fafc;
+  background: #ffffff;
   padding: 30px;
   border-radius: 12px;
   align-items: flex-start;
+  border: 1px solid #f1f5f9;
 }
 
 .step-number {
