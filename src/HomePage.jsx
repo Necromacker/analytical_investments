@@ -101,12 +101,14 @@ const HomePage = () => {
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
+          <Link to="/">
+            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
+          </Link>
         </div>
 
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
           <a href="#home" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</a>
-          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About US</Link>
+          <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
 
           <div className="nav-item dropdown">
             <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
@@ -121,10 +123,9 @@ const HomePage = () => {
             </div>
           </div>
 
-          <a href="#emi" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</a>
+          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <a href="#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-          <a href="#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact US</a>
-
+          <a href="#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -410,13 +411,12 @@ const HomePage = () => {
           </div>
 
           <div className="footer-col services">
-            <h3>Our Services</h3>
+            <h3>Our Products</h3>
             <ul>
               <li><Link to="/without-collateral">Without Collateral</Link></li>
               <li><Link to="/with-collateral">With Collateral</Link></li>
               <li><Link to="/insurance">Insurance Services</Link></li>
               <li><Link to="/mutual-funds">Mutual Funds</Link></li>
-              <li><Link to="/services">Services</Link></li>
             </ul>
           </div>
 

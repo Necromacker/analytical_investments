@@ -71,26 +71,33 @@ const WithoutCollateralPage = () => {
       {/* Navbar */}
       <nav className="navbar">
         <div className="nav-logo">
-          <Link to="/"><img src="/LOGO.png" alt="Logo" className="navbar-logo-img" /></Link>
+          <Link to="/">
+            <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
+          </Link>
         </div>
+
         <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
           <Link to="/" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           <Link to="/about" className="nav-item" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+
           <div className="nav-item dropdown">
             <div className="dropdown-trigger" onClick={() => setProductsOpen(!productsOpen)}>
               Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
             </div>
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <Link to="/insurance" className="dropdown-item">Insurance</Link>
-              <Link to="/mutual-funds" className="dropdown-item">Mutual Funds</Link>
-              <Link to="/services" className="dropdown-item">Services</Link>
-              <Link to="/without-collateral" className="dropdown-item active">Without Collateral</Link>
-              <Link to="/with-collateral" className="dropdown-item">With Collateral</Link>
+              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
+              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
+              <Link to="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link to="/without-collateral" className="dropdown-item active" onClick={() => setMobileMenuOpen(false)}>Without Collateral</Link>
+              <Link to="/with-collateral" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>With Collateral</Link>
             </div>
           </div>
-          <a href="/#emi" className="nav-item">EMI Calculator</a>
-          <a href="/#contact" className="nav-item">Contact US</a>
+
+          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
+          <a href="/#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
+          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
         </div>
+
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <i className={mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
@@ -122,7 +129,7 @@ const WithoutCollateralPage = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-col about">
-            <img src="/LOGO.png" alt="Logo" className="footer-logo" />
+            <img src="/LOGO.png" alt="Analytical Investment" className="footer-logo" />
             <p>Analytical Investment is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
             <div className="footer-socials">
               <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -137,6 +144,7 @@ const WithoutCollateralPage = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
+              <li><a href="/#testimonials">Testimonials</a></li>
               <li><a href="/#contact">Contact Us</a></li>
             </ul>
           </div>
@@ -147,6 +155,7 @@ const WithoutCollateralPage = () => {
               <li><Link to="/with-collateral">With Collateral</Link></li>
               <li><Link to="/insurance">Insurance Services</Link></li>
               <li><Link to="/mutual-funds">Mutual Funds</Link></li>
+              <li><Link to="/services">Services</Link></li>
             </ul>
           </div>
           <div className="footer-col contact">
@@ -154,6 +163,13 @@ const WithoutCollateralPage = () => {
             <div className="footer-contact-item"><i className="fas fa-map-marker-alt"></i> <span>HQ, Jayanagar, Bengaluru</span></div>
             <div className="footer-contact-item"><i className="fas fa-envelope"></i> <span>ravi@analyticalinvestments.com</span></div>
             <div className="footer-contact-item"><i className="fas fa-phone-alt"></i> <span>(+91) 831 731 8136</span></div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Analytical Investment. All Rights Reserved.</p>
+          <div className="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
           </div>
         </div>
       </footer>

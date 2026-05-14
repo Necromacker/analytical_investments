@@ -66,9 +66,9 @@ const InsurancePage = () => {
             </div>
           </div>
 
-          <a href="/#emi" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</a>
+          <Link to="/emi-calculator" className="nav-item" onClick={() => setMobileMenuOpen(false)}>EMI Calculator</Link>
           <a href="/#blog" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact US</a>
+          <a href="/#contact" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
         </div>
 
         <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -134,7 +134,6 @@ const InsurancePage = () => {
               <a href="https://wa.me/918317318136"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
-
           <div className="footer-col links">
             <h3>Quick Links</h3>
             <ul>
@@ -145,9 +144,8 @@ const InsurancePage = () => {
               <li><a href="/#contact">Contact Us</a></li>
             </ul>
           </div>
-
           <div className="footer-col services">
-            <h3>Our Services</h3>
+            <h3>Our Products</h3>
             <ul>
               <li><Link to="/without-collateral">Without Collateral</Link></li>
               <li><Link to="/with-collateral">With Collateral</Link></li>
@@ -156,24 +154,13 @@ const InsurancePage = () => {
               <li><Link to="/services">Services</Link></li>
             </ul>
           </div>
-
           <div className="footer-col contact">
             <h3>Contact Us</h3>
-            <div className="footer-contact-item">
-              <i className="fas fa-map-marker-alt"></i>
-              <span>HQ, Jayanagar, Bengaluru</span>
-            </div>
-            <div className="footer-contact-item">
-              <i className="fas fa-envelope"></i>
-              <span>ravi@analyticalinvestments.com</span>
-            </div>
-            <div className="footer-contact-item">
-              <i className="fas fa-phone-alt"></i>
-              <span>(+91) 831 731 8136</span>
-            </div>
+            <div className="footer-contact-item"><i className="fas fa-map-marker-alt"></i> <span>HQ, Jayanagar, Bengaluru</span></div>
+            <div className="footer-contact-item"><i className="fas fa-envelope"></i> <span>ravi@analyticalinvestments.com</span></div>
+            <div className="footer-contact-item"><i className="fas fa-phone-alt"></i> <span>(+91) 831 731 8136</span></div>
           </div>
         </div>
-
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Analytical Investment. All Rights Reserved.</p>
           <div className="footer-bottom-links">

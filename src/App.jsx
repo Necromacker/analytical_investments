@@ -8,6 +8,7 @@ import MutualFundsPage from './MutualFundsPage'
 import ServicesPage from './ServicesPage'
 import WithoutCollateralPage from './WithoutCollateralPage'
 import WithCollateralPage from './WithCollateralPage'
+import EmiCalculatorPage from './EmiCalculatorPage'
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/without-collateral" element={<WithoutCollateralPage />} />
         <Route path="/with-collateral" element={<WithCollateralPage />} />
+        <Route path="/emi-calculator" element={<EmiCalculatorPage />} />
       </Routes>
     </Router>
   )
