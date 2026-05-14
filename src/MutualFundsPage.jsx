@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './InsurancePage.css';
+import { Link } from 'react-router-dom';
+import './MutualFundsPage.css';
 
-const InsurancePage = () => {
+const MutualFundsPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
-  const navigate = useNavigate();
 
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleCardClick = (type) => {
-    navigate(`/insurance/${type}`);
-  };
-
   return (
-    <div className="insurance-page">
+    <div className="mutual-funds-page">
       {/* Top Bar */}
       <div className="top-bar">
         <div className="top-bar-left">
@@ -58,8 +53,8 @@ const InsurancePage = () => {
               Products <i className={`fas fa-chevron-down ${productsOpen ? 'up' : ''}`}></i>
             </div>
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
-              <Link to="/insurance" className="dropdown-item active" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
-              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
+              <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
+              <Link to="/mutual-funds" className="dropdown-item active" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
               <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             </div>
           </div>
@@ -75,46 +70,104 @@ const InsurancePage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="insurance-hero">
-        <div className="insurance-hero-content">
-          <h1 className="insurance-hero-title">Insurance Services Under One Roof</h1>
-          <p className="insurance-subtitle">
-            Complete protection for your life, health, assets, business, and investments.
-          </p>
-
-          <button className="apply-btn" onClick={() => window.location.href = '/#contact'}>Get a Quote</button>
+      <section className="mf-hero">
+        <div className="mf-hero-content">
+          <h1 className="mf-hero-title">Mutual Funds with Purpose. Backed by Expertise.</h1>
         </div>
       </section>
 
-      {/* Insurance Services Grid */}
-      <section className="insurance-services">
+      {/* Introduction Section */}
+      <section className="mf-intro">
         <div className="container">
-          <h2 className="section-title">Types of Insurance We Offer</h2>
-          <div className="insurance-grid">
-            <div className="ins-card" onClick={() => handleCardClick('motor-insurance')} style={{ cursor: 'pointer' }}>
-              <div className="ins-icon"><i className="fas fa-car"></i></div>
-              <h3>Motor Insurance</h3>
+          <div className="mf-intro-flex">
+            <div className="mf-intro-content">
+              <h2 className="mf-section-title">Grow Your Wealth, the Smarter Way</h2>
+              <div className="title-underline-left"></div>
+              <p>
+                At Analytical Investments, mutual funds are not just another product — they’re a powerful tool to help you reach your financial goals. Whether you’re a first-time investor or a seasoned professional, our mutual fund solutions are tailored to your needs, backed by experienced guidance and technology-enabled execution.
+              </p>
             </div>
-            <div className="ins-card" onClick={() => handleCardClick('health-insurance')} style={{ cursor: 'pointer' }}>
-              <div className="ins-icon"><i className="fas fa-heartbeat"></i></div>
-              <h3>Health Insurance</h3>
+            <div className="mf-intro-image">
+              <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grow Your Wealth" />
             </div>
-            <div className="ins-card" onClick={() => handleCardClick('travel-insurance')} style={{ cursor: 'pointer' }}>
-              <div className="ins-icon"><i className="fas fa-plane"></i></div>
-              <h3>Travel Insurance</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Invest Section */}
+      <section className="mf-why">
+        <div className="container">
+          <h2 className="section-title">Why Invest Through Us?</h2>
+          
+          <div className="mf-why-grid">
+            <div className="mf-why-card">
+              <div className="mf-why-icon"><i className="fas fa-hands-helping"></i></div>
+              <h3>Handholding for First-Time Investors</h3>
+              <p>From explaining basics to setting up investments, we walk with you at every step.</p>
             </div>
-            <div className="ins-card" onClick={() => handleCardClick('home-property-insurance')} style={{ cursor: 'pointer' }}>
-              <div className="ins-icon"><i className="fas fa-home"></i></div>
-              <h3>Home & Property Insurance</h3>
+            <div className="mf-why-card">
+              <div className="mf-why-icon"><i className="fas fa-bullseye"></i></div>
+              <h3>Goal-Based Investing</h3>
+              <p>Whether it’s retirement, children’s education, or wealth creation, we map your investments to your life’s goals.</p>
             </div>
-            <div className="ins-card" onClick={() => handleCardClick('business-commercial-insurance')} style={{ cursor: 'pointer' }}>
-              <div className="ins-icon"><i className="fas fa-building"></i></div>
-              <h3>Business / Commercial Insurance</h3>
+            <div className="mf-why-card">
+              <div className="mf-why-icon"><i className="fas fa-user-tie"></i></div>
+              <h3>Always-on Guidance</h3>
+              <p>You get access to personalized attention — not just a dashboard.</p>
             </div>
-            <div className="ins-card" onClick={() => handleCardClick('miscellaneous-insurance')} style={{ cursor: 'pointer' }}>
-              <div className="ins-icon"><i className="fas fa-mobile-alt"></i></div>
-              <h3>Miscellaneous Insurance</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="mf-process">
+        <div className="container">
+          <h2 className="section-title">Our Process</h2>
+          <p className="section-subtitle-center">Simple. Paperless. Personal.</p>
+          
+          <div className="mf-process-steps">
+            <div className="step-item">
+              <div className="step-number">1</div>
+              <div className="step-content">
+                <h3>We Understand Your Goals</h3>
+                <p>Through a quick consultation, we identify what truly matters to you.</p>
+              </div>
             </div>
+            <div className="step-item">
+              <div className="step-number">2</div>
+              <div className="step-content">
+                <h3>We Recommend the Right Funds</h3>
+                <p>Based on your goals, risk profile, and time horizon.</p>
+              </div>
+            </div>
+            <div className="step-item">
+              <div className="step-number">3</div>
+              <div className="step-content">
+                <h3>We Guide You Through Execution</h3>
+                <p>Easy, paperless investment process.</p>
+              </div>
+            </div>
+            <div className="step-item">
+              <div className="step-number">4</div>
+              <div className="step-content">
+                <h3>We Stay in Touch</h3>
+                <p>Ongoing portfolio reviews and periodic rebalancing as required.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="mf-cta">
+        <div className="container">
+          <div className="mf-cta-content">
+            <h2>Let’s Talk Investments</h2>
+            <p>Have questions? Need clarity? Want to get started?</p>
+            <p className="whatsapp-text">Tap the WhatsApp button and our expert will guide you from there</p>
+            <a href="https://wa.me/918317318136" className="mf-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-whatsapp"></i> Whatsapp Now
+            </a>
           </div>
         </div>
       </section>
@@ -148,7 +201,7 @@ const InsurancePage = () => {
             <h3>Our Services</h3>
             <ul>
               <li><a href="/#services">Loan Solutions</a></li>
-              <li><a href="/#services">Insurance Services</a></li>
+              <li><Link to="/insurance">Insurance Services</Link></li>
               <li><Link to="/mutual-funds">Mutual Funds</Link></li>
               <li><a href="/#services">Wealth Management</a></li>
               <li><a href="/#services">Real Estate Advisory</a></li>
@@ -188,4 +241,4 @@ const InsurancePage = () => {
   );
 };
 
-export default InsurancePage;
+export default MutualFundsPage;

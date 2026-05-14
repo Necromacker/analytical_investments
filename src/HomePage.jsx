@@ -114,7 +114,7 @@ const HomePage = () => {
             </div>
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
               <Link to="/insurance" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
-              <a href="#mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</a>
+              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
               <a href="#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</a>
             </div>
           </div>
@@ -412,7 +412,7 @@ const HomePage = () => {
             <ul>
               <li><a href="#">Loan Solutions</a></li>
               <li><Link to="/insurance">Insurance Services</Link></li>
-              <li><a href="#">Investment Solutions</a></li>
+              <li><Link to="/mutual-funds">Mutual Funds</Link></li>
               <li><a href="#">Wealth Management</a></li>
               <li><a href="#">Real Estate Advisory</a></li>
             </ul>

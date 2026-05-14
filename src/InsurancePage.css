@@ -31,9 +31,10 @@
 
 .insurance-subtitle {
   font-size: 22px;
-  color: #ddd;
+  color: var(--primary-green);
   margin-bottom: 30px;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 .hero-divider {

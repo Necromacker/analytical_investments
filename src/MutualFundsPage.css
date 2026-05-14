@@ -1,0 +1,269 @@
+.mutual-funds-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.mf-hero {
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+  text-align: center;
+  color: white;
+}
+
+.mf-hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  max-width: 900px;
+  line-height: 1.2;
+}
+
+/* Intro Section */
+.mf-intro {
+  padding: 100px 5%;
+  background-color: #fff;
+}
+
+.mf-intro-flex {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.mf-intro-content {
+  flex: 1;
+}
+
+.mf-section-title {
+  font-size: 36px;
+  color: #002e5b;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.title-underline-left {
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-green);
+  margin-bottom: 30px;
+}
+
+.mf-intro-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.mf-intro-image {
+  flex: 1;
+}
+
+.mf-intro-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Why Invest Section */
+.mf-why {
+  padding: 100px 5%;
+  background-color: #0f172a;
+  background-image:
+    linear-gradient(30deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+    linear-gradient(150deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+    linear-gradient(30deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+    linear-gradient(150deg, #1e293b 12%, transparent 12.5%, transparent 87%, #1e293b 87.5%, #1e293b),
+    linear-gradient(60deg, #1e293b 25%, transparent 25.5%, transparent 75%, #1e293b 75.5%, #1e293b),
+    linear-gradient(60deg, #1e293b 25%, transparent 25.5%, transparent 75%, #1e293b 75.5%, #1e293b);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+}
+
+.mf-why .section-title {
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mf-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mf-why-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mf-why-card:hover {
+  transform: translateY(-10px);
+}
+
+.mf-why-icon {
+  font-size: 40px;
+  color: #0076c0;
+  margin-bottom: 20px;
+}
+
+.mf-why-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #002e5b;
+  font-weight: 700;
+}
+
+.mf-why-card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Process Section */
+.mf-process {
+  padding: 100px 5%;
+  background-color: white;
+  text-align: center;
+}
+
+.mf-process .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mf-process .section-subtitle-center {
+  font-size: 24px;
+  font-weight: 700;
+  color: #002e5b;
+  margin-bottom: 40px;
+}
+
+.mf-process-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.step-item {
+  display: flex;
+  gap: 25px;
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 12px;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: #002e5b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #002e5b;
+  text-align: left;
+}
+
+.step-content p {
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* CTA Section */
+.mf-cta {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #002e5b 0%, #0076c0 100%);
+  color: white;
+  text-align: center;
+}
+
+.mf-cta-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.mf-cta-content p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.whatsapp-text {
+  font-weight: 600;
+  margin-bottom: 30px !important;
+  color: #ffb800;
+}
+
+.mf-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.mf-whatsapp-btn:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mf-intro-flex {
+    flex-direction: column;
+  }
+  .mf-why-grid {
+    grid-template-columns: 1fr;
+  }
+  .mf-process-steps {
+    grid-template-columns: 1fr;
+  }
+  .mf-hero-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mf-hero {
+    height: 500px;
+  }
+  .mf-cta-content h2 {
+    font-size: 32px;
+  }
+}

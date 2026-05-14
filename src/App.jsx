@@ -4,6 +4,7 @@ import HomePage from './HomePage'
 import AboutPage from './AboutPage'
 import InsurancePage from './InsurancePage'
 import InsuranceDetail from './InsuranceDetail'
+import MutualFundsPage from './MutualFundsPage'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/insurance" element={<InsurancePage />} />
         <Route path="/insurance/:type" element={<InsuranceDetail />} />
+        <Route path="/mutual-funds" element={<MutualFundsPage />} />
       </Routes>
     </Router>
   )

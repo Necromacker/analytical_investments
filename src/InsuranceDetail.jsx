@@ -158,7 +158,7 @@ const InsuranceDetail = () => {
             </div>
             <div className={`dropdown-menu ${productsOpen ? 'show' : ''}`}>
               <Link to="/insurance" className="dropdown-item active" onClick={() => setMobileMenuOpen(false)}>Insurance</Link>
-              <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
+              <Link to="/mutual-funds" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Mutual Funds</Link>
               <Link to="/#services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             </div>
           </div>
@@ -317,7 +317,7 @@ const InsuranceDetail = () => {
             <ul>
               <li><a href="/#services">Loan Solutions</a></li>
               <li><Link to="/insurance">Insurance Services</Link></li>
-              <li><a href="/#services">Investment Solutions</a></li>
+              <li><Link to="/mutual-funds">Mutual Funds</Link></li>
               <li><a href="/#services">Wealth Management</a></li>
               <li><a href="/#services">Real Estate Advisory</a></li>
             </ul>
