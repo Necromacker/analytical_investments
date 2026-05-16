@@ -37,14 +37,14 @@ const BlogDetail = () => {
             <i className="fas fa-arrow-left"></i> Back to Blog
           </Link>
           
-          <div className="blog-media" style={{ borderRadius: '24px', overflow: 'hidden', marginBottom: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
+          <div style={{ borderRadius: '24px', overflow: 'hidden', marginBottom: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', background: '#f8fafc', display: 'flex', justifyContent: 'center' }}>
             {post.video ? (
-              <video controls className="blog-video" style={{ width: '100%', display: 'block' }}>
+              <video controls style={{ width: '100%', display: 'block', maxHeight: '600px', backgroundColor: '#000' }}>
                 <source src={post.video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             ) : (
-              <img src={post.image} alt={post.title} className="blog-image" style={{ width: '100%', display: 'block', height: 'auto' }} />
+              <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'contain', display: 'block' }} />
             )}
           </div>
 
@@ -59,7 +59,7 @@ const BlogDetail = () => {
             <p style={{ marginBottom: '25px' }}>{post.fullContent || post.content}</p>
             {/* Added more placeholder text if needed */}
             <p style={{ marginBottom: '25px' }}>
-              Financial decisions can often be complex and overwhelming. At Analytical Investment, we aim to simplify these choices by providing expert guidance and transparent information. Our goal is to help you navigate the landscape of loans, insurance, and investments with confidence.
+              Financial decisions can often be complex and overwhelming. At Analytical Investments, we aim to simplify these choices by providing expert guidance and transparent information. Our goal is to help you navigate the landscape of loans, insurance, and investments with confidence.
             </p>
             <p>
               Stay tuned for more insights and updates from our experts as we continue to explore the world of finance and help you achieve your financial goals.
@@ -69,9 +69,9 @@ const BlogDetail = () => {
           <div className="blog-share" style={{ marginTop: '60px', padding: '40px', background: '#f8fafc', borderRadius: '24px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--primary-blue)', marginBottom: '20px' }}>Did you find this helpful? Share it!</h3>
             <div className="social-links" style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
-                <a href="https://hi-in.facebook.com/analyticalinvestment" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/analyticalinvestment" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
                 <a href="https://www.linkedin.com/company/analytical-investments/" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/analyticalinvestments/" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
                 <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>

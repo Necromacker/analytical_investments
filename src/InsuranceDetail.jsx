@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import './InsuranceDetail.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import TopBar from './TopBar';
+
+// ─── EmailJS Config (same as ContactPage) ────────────────────────────────────
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+// ─────────────────────────────────────────────────────────────────────────────
 
 const insuranceData = {
   'motor-insurance': {
@@ -112,6 +119,33 @@ const InsuranceDetail = () => {
   const { type } = useParams();
   const data = insuranceData[type] || insuranceData['life-insurance'];
 
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [formStatus, setFormStatus] = useState('idle');
+
+  const handleChange = (e) => setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormStatus('sending');
+    emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        to_email:   'aibanksolution@gmail.com',
+        from_name:  formData.name,
+        from_email: formData.email,
+        phone:      formData.phone,
+        insurance_type: data.title,
+      },
+      EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      setFormStatus('success');
+      setFormData({ name: '', email: '', phone: '' });
+    })
+    .catch(() => setFormStatus('error'));
+  };
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [type]);
@@ -210,27 +244,29 @@ const InsuranceDetail = () => {
               Plan today for a worry-free tomorrow — explore {data.title} solutions with us!
             </h2>
             <div className="plan-today-socials">
-              <a href="https://hi-in.facebook.com/analyticalinvestment" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/analyticalinvestment" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
               <a href="https://www.linkedin.com/company/analytical-investments/" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-              <a href="https://www.instagram.com/analyticalinvestments/" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" className="social-circle" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
 
           <div className="plan-today-right">
             <div className="contact-form-card">
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <input type="text" placeholder="Name" required />
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
                 </div>
                 <div className="form-group">
-                  <input type="email" placeholder="Email" required />
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
                 </div>
                 <div className="form-group">
-                  <input type="tel" placeholder="Phone Number" required />
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required />
                 </div>
-                <button type="submit" className="form-submit-btn">
-                  CONTACT US
+                {formStatus === 'success' && <p style={{ color: 'green', fontWeight: '600', marginBottom: '10px' }}>✅ Message sent! We'll contact you soon.</p>}
+                {formStatus === 'error'   && <p style={{ color: 'red',   fontWeight: '600', marginBottom: '10px' }}>❌ Something went wrong. Please try again.</p>}
+                <button type="submit" className="form-submit-btn" disabled={formStatus === 'sending'}>
+                  {formStatus === 'sending' ? 'Sending...' : 'CONTACT US'}
                 </button>
               </form>
             </div>

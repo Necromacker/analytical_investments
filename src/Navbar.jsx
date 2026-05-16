@@ -9,7 +9,7 @@ const Navbar = ({ activePage }) => {
     <nav className="navbar">
       <div className="nav-logo">
         <Link to="/">
-          <img src="/LOGO.png" alt="Analytical Investment" className="navbar-logo-img" />
+          <img src="/LOGO.png" alt="Analytical Investments" className="navbar-logo-img" />
         </Link>
       </div>
 

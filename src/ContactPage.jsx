@@ -1,12 +1,54 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import './ContactPage.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import TopBar from './TopBar';
 
+// ─── EmailJS Config ─────────────────────────────────────────────────────────
+// 1. Go to https://www.emailjs.com and sign up (free)
+// 2. Create a service connected to aibanksolution@gmail.com
+// 3. Create an email template
+// 4. Replace the placeholders below with your real IDs
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz456'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'xxxxxxxxxxxxxxxxxxx'
+// ────────────────────────────────────────────────────────────────────────────
+
 const ContactPage = () => {
   const [activeFaq, setActiveFaq] = useState(null);
+  const [formData, setFormData] = useState({
+    occupation: '', name: '', phone: '', email: '', company: '', amount: '', loanType: ''
+  });
+  const [formStatus, setFormStatus] = useState('idle'); // idle | sending | success | error
+
+  const handleChange = (e) => setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormStatus('sending');
+    emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        to_email:   'aibanksolution@gmail.com',
+        occupation: formData.occupation,
+        from_name:  formData.name,
+        phone:      formData.phone,
+        from_email: formData.email,
+        company:    formData.company,
+        amount:     formData.amount,
+        loan_type:  formData.loanType,
+      },
+      EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      setFormStatus('success');
+      setFormData({ occupation: '', name: '', phone: '', email: '', company: '', amount: '', loanType: '' });
+    })
+    .catch(() => setFormStatus('error'));
+  };
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,7 +108,7 @@ const ContactPage = () => {
           <div className="map-container">
             <iframe 
               title="Analytical Investments Office"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5447285623326!2d77.5873!3d12.93!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159048c90969%3A0xc07887e35b7501b1!2sJayanagar%2C%20Bengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1715690000000!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9!2d77.7006864!3d12.9702837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13cb00000001%3A0xf7bccca71a0c268e!2sAnalytical%20Investments%20-%20Business%20Loan%20Bangalore!5e1!3m2!1sen!2sin!4v1715690000000!5m2!1sen!2sin" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 
@@ -115,11 +157,11 @@ const ContactPage = () => {
               <h2>GET IN TOUCH</h2>
               <div className="title-underline"></div>
             </div>
-            <form className="get-in-touch-form">
+            <form className="get-in-touch-form" onSubmit={handleSubmit}>
               <div className="form-grid">
                 <div className="form-group">
-                  <select required>
-                    <option value="" disabled selected>Select Occupation</option>
+                  <select name="occupation" value={formData.occupation} onChange={handleChange} required>
+                    <option value="" disabled>Select Occupation</option>
                     <option value="salaried">Salaried</option>
                     <option value="self-employed">Self-Employed</option>
                     <option value="business">Business Owner</option>
@@ -127,23 +169,23 @@ const ContactPage = () => {
                   </select>
                 </div>
                 <div className="form-group">
-                  <input type="text" placeholder="Full Name*" required />
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name*" required />
                 </div>
                 <div className="form-group">
-                  <input type="tel" placeholder="Phone Number*" required />
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number*" required />
                 </div>
                 <div className="form-group">
-                  <input type="email" placeholder="Email ID*" required />
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email ID*" required />
                 </div>
                 <div className="form-group">
-                  <input type="text" placeholder="Company Name" />
+                  <input type="text" name="company" value={formData.company} onChange={handleChange} placeholder="Company Name" />
                 </div>
                 <div className="form-group">
-                  <input type="number" placeholder="Loan Amount Required" />
+                  <input type="number" name="amount" value={formData.amount} onChange={handleChange} placeholder="Loan Amount Required" />
                 </div>
                 <div className="form-group full-width">
-                  <select required>
-                    <option value="" disabled selected>Select Loan/Credit Type</option>
+                  <select name="loanType" value={formData.loanType} onChange={handleChange} required>
+                    <option value="" disabled>Select Loan/Credit Type</option>
                     <option value="unsecured-business">Unsecured Business Loan</option>
                     <option value="home-loan">Home Loan</option>
                     <option value="lap">Loan Against Property</option>
@@ -153,7 +195,11 @@ const ContactPage = () => {
                   </select>
                 </div>
               </div>
-              <button type="submit" className="submit-btn">Submit</button>
+              {formStatus === 'success' && <p style={{ color: 'green', fontWeight: '600', marginBottom: '10px' }}>✅ Message sent! We'll get back to you soon.</p>}
+              {formStatus === 'error'   && <p style={{ color: 'red',   fontWeight: '600', marginBottom: '10px' }}>❌ Something went wrong. Please try again.</p>}
+              <button type="submit" className="submit-btn" disabled={formStatus === 'sending'}>
+                {formStatus === 'sending' ? 'Sending...' : 'Submit'}
+              </button>
             </form>
           </div>
         </div>

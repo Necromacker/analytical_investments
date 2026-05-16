@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.collateral-hero {
+.with-collateral .collateral-hero {
   height: 600px;
   background: linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), 
               url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');

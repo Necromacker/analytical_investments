@@ -19,26 +19,26 @@ const HomePage = () => {
     {
       id: 1,
       name: "Sathish Narayanan",
-      quote: "Secured working capital loan with good options & regular communication (Thanks Princy!) Analytical Investment reached out to multiple banks to get me the best possible options for my working capital loan. They maintained regular communication throughout the process, ensuring a smooth experience.",
+      quote: "Secured working capital loan with good options & regular communication (Thanks Princy!) Analytical Investments reached out to multiple banks to get me the best possible options for my working capital loan. They maintained regular communication throughout the process, ensuring a smooth experience.",
       title: "Google Review",
       stars: 5,
-      color: "#e91e63"
+      color: "#2e6bb4" // Primary Blue
     },
     {
       id: 2,
       name: "Saleth Premson",
-      quote: "Mr. Vaseem's in-depth knowledge and guidance made the home loan transfer process incredibly easy for me. Analytical Investment' commitment to personalized service ensured all my questions and concerns were addressed promptly.",
+      quote: "Mr. Vaseem's in-depth knowledge and guidance made the home loan transfer process incredibly easy for me. Analytical Investments' commitment to personalized service ensured all my questions and concerns were addressed promptly.",
       title: "Google Review",
       stars: 5,
-      color: "#4caf50"
+      color: "#22b14c" // Primary Green
     },
     {
       id: 3,
       name: "Atul Singh",
-      quote: "I recommend Analytical Investment for my hassle-free home loan for resale. They supported me throughout the home loan process, from application to disbursement. They protected me from unnecessary expenses and secured a competitive interest rate.",
+      quote: "I recommend Analytical Investments for my hassle-free home loan for resale. They supported me throughout the home loan process, from application to disbursement. They protected me from unnecessary expenses and secured a competitive interest rate.",
       title: "Google Review",
       stars: 5,
-      color: "#03a9f4"
+      color: "#29abe2" // Accent Blue
     },
     {
       id: 4,
@@ -46,23 +46,23 @@ const HomePage = () => {
       quote: "Their experience and knowledge of the loan process allowed me to get my loan application approved quickly and efficiently. I only needed to be involved in minimal steps like signing documents.",
       title: "Google Review",
       stars: 5,
-      color: "#ff5722"
+      color: "#2e6bb4" // Primary Blue
     },
     {
       id: 5,
       name: "Manisha Shakthidhar",
-      quote: "I commend Analytical Investment' team for their excellent communication and proactive approach. Their negotiation skills secured me a loan with a significantly lower interest rate.",
+      quote: "I commend Analytical Investments' team for their excellent communication and proactive approach. Their negotiation skills secured me a loan with a significantly lower interest rate.",
       title: "Google Review",
       stars: 5,
-      color: "#2196f3"
+      color: "#22b14c" // Primary Green
     },
     {
       id: 6,
       name: "Prabhu Raj Anjanappa",
-      quote: "After facing delays and challenges with securing the desired loan amount, I found success with Analytical Investment. I particularly commend Mr. Ravindra Bhatnagar's initiative and problem-solving skills.",
+      quote: "After facing delays and challenges with securing the desired loan amount, I found success with Analytical Investments. I particularly commend Mr. Ravindra Bhatnagar's initiative and problem-solving skills.",
       title: "Google Review",
       stars: 5,
-      color: "#9c27b0",
+      color: "#29abe2", // Accent Blue
       letter: "L"
     }
   ];
@@ -85,7 +85,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Analytical Investment</h1>
+          <h1>Analytical Investments</h1>
 
           <p>Reducing interest rate on your existing loan</p>
           <Link to="/contact" className="apply-btn">Contact us</Link>
@@ -105,12 +105,12 @@ const HomePage = () => {
           </div>
           <div className="about-right">
             <span className="welcome-tag">WELCOME TO</span>
-            <h2 className="about-title">Analytical Investment</h2>
+            <h2 className="about-title">Analytical Investments</h2>
             <div className="title-underline"></div>
             <h4 className="about-subtitle">Your Trusted Partner for Banking, Investment and Real Estate Solutions</h4>
             <div className="about-text">
               <p>
-                <strong>Analytical Investment</strong> provides sound solutions in banking, investment, and real estate. We specialize in securing various loans at the lowest possible interest rates, even for existing ones, through our partnerships with over 120+ leading banks.
+                <strong>Analytical Investments</strong> provides sound solutions in banking, investment, and real estate. We specialize in securing various loans at the lowest possible interest rates, even for existing ones, through our partnerships with over 120+ leading banks.
               </p>
               <p>
                 From wealth management services like insurance and mutual funds to comprehensive real estate advisory for buying, selling, or renting properties, we offer end-to-end support tailored to the needs of individuals and businesses.
@@ -193,7 +193,7 @@ const HomePage = () => {
       </section>
       {/* What Sets Us Apart Section */}
       <section className="apart-section">
-        <h2 className="apart-main-title">WE HAVE HELPED MORE THAN 10,000 CUSTOMERS</h2>
+        <h2 className="apart-main-title">WE HAVE HELPED MORE THAN 30,000 CUSTOMERS</h2>
         <div className="apart-container">
           <div className="apart-left">
             <div className="apart-item">
@@ -212,10 +212,10 @@ const HomePage = () => {
 
           <div className="apart-center">
             <div className="apart-image-card top">
-              <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=800&q=80" alt="Consultation" className="apart-img" />
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Consultation" className="apart-img" />
             </div>
             <div className="apart-image-card bottom">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Customer Success" className="apart-img" />
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Customer Success" className="apart-img" />
             </div>
           </div>
 
@@ -294,7 +294,7 @@ const HomePage = () => {
       <section className="cta-section">
         <div className="cta-content">
           <h2>Our Advisors Are Ready To Help</h2>
-          <p>Contact Analytical Investment Today and let our experts guide you toward smarter, more confident decisions.</p>
+          <p>Contact Analytical Investments Today and let our experts guide you toward smarter, more confident decisions.</p>
           <div className="cta-btns">
             <Link to="/contact" className="cta-btn gold">Contact Us</Link>
             <Link to="/about#promoter" className="cta-btn outline">Learn More</Link>
@@ -308,26 +308,26 @@ const HomePage = () => {
           <div className="location-left">
             <div className="map-wrapper">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5866!2d77.5891!3d12.934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b17a151515%3A0x1a15151515151515!2sWork%20District!5e0!3m2!1sen!2sin!4v1715160000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9!2d77.7006864!3d12.9702837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13cb00000001%3A0xf7bccca71a0c268e!2sAnalytical%20Investments%20-%20Business%20Loan%20Bangalore!5e0!3m2!1sen!2sin!4v1715690000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps"
+                title="Analytical Investments Office"
               ></iframe>
             </div>
           </div>
           <div className="location-right">
             <h2 className="location-title">OUR OFFICE LOCATION</h2>
             <p className="location-address">
-              ANALYTICAL INVESTMENT, C/O WORK DISTRICT, #45, 46 (NEW NO: 14) BLN ARCADE, 7TH B MAIN ROAD, 4TH BLOCK JAYANAGAR, BENGALURU-560011
+              ANALYTICAL INVESTMENTS, C/O WORK DISTRICT, #45, 46 (NEW NO: 14) BLN ARCADE, 7TH B MAIN ROAD, 4TH BLOCK JAYANAGAR, BENGALURU-560011
             </p>
             <div className="location-socials">
-              <a href="https://hi-in.facebook.com/analyticalinvestment" className="social-box fb" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/analyticalinvestment" className="social-box fb" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
               <a href="https://www.linkedin.com/company/analytical-investments/" className="social-box li" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-              <a href="https://www.instagram.com/analyticalinvestments/" className="social-box ig" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="social-box ig" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" className="social-box wa" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>

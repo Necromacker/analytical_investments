@@ -7,12 +7,12 @@ const Footer = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-col about">
-            <img src="/LOGO.png" alt="Analytical Investment" className="footer-logo" />
-            <p>Analytical Investment is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
+            <img src="/LOGO.png" alt="Analytical Investments" className="footer-logo" />
+            <p>Analytical Investments is your trusted partner for financial and real estate solutions with over 25 years of expertise.</p>
             <div className="footer-socials">
-              <a href="https://hi-in.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
               <a href="https://www.linkedin.com/company/analytical-investments/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-              <a href="https://www.instagram.com/analyticalinvestments/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               <a href="https://api.whatsapp.com/send/?phone=919606601808&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Analytical Investment. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Analytical Investments. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>

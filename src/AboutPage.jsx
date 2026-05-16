@@ -65,7 +65,7 @@ const AboutPage = () => {
           {/* Mission */}
           <div className="vm-row">
             <div className="vm-image">
-              <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Mission" />
+              <img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Indian Currency - Our Mission" />
             </div>
             <div className="vm-text">
               <div className="vm-tag">OUR MISSION</div>
@@ -84,12 +84,12 @@ const AboutPage = () => {
         <div className="team-grid">
           {/* Maj Ravindra Bhatnagar */}
           <div className="card">
-            <button className="mail">
+            <a href="mailto:aibanksolution@gmail.com" className="mail">
               <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <rect rx="2" y="4" x="2" height="16" width="20"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
-            </button>
+            </a>
             <div className="profile-pic">
               <img src={MajImg} alt="Maj Ravindra Bhatnagar" />
             </div>
@@ -104,9 +104,9 @@ const AboutPage = () => {
             </div>
             <div className="bottom-bottom">
               <div className="social-links-container">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/maj-ravindra-bhatnagar/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               </div>
               <div className="contact-btn-wrapper">
                 <Link to="/contact" className="button">Contact Me</Link>
@@ -116,12 +116,12 @@ const AboutPage = () => {
 
           {/* Keshav Gowda */}
           <div className="card">
-            <button className="mail">
+            <a href="mailto:aibanksolution@gmail.com" className="mail">
               <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <rect rx="2" y="4" x="2" height="16" width="20"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
-            </button>
+            </a>
             <div className="profile-pic">
               <img src={KeshavImg} alt="Keshav Gowda" />
             </div>
@@ -136,9 +136,9 @@ const AboutPage = () => {
             </div>
             <div className="bottom-bottom">
               <div className="social-links-container">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/keshav-gowda-859abb225/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               </div>
               <div className="contact-btn-wrapper">
                 <Link to="/contact" className="button">Contact Me</Link>
@@ -148,12 +148,12 @@ const AboutPage = () => {
 
           {/* Pavan Kumar k */}
           <div className="card">
-            <button className="mail">
+            <a href="mailto:aibanksolution@gmail.com" className="mail">
               <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <rect rx="2" y="4" x="2" height="16" width="20"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
-            </button>
+            </a>
             <div className="profile-pic">
               <img src={PavanImg} alt="Pavan Kumar k" />
             </div>
@@ -168,9 +168,9 @@ const AboutPage = () => {
             </div>
             <div className="bottom-bottom">
               <div className="social-links-container">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/pavan-gowda-pk-8779b6135/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               </div>
               <div className="contact-btn-wrapper">
                 <Link to="/contact" className="button">Contact Me</Link>
@@ -186,12 +186,12 @@ const AboutPage = () => {
         <div className="team-grid">
           {/* Adv. Ashok Nair. K */}
           <div className="card">
-            <button className="mail">
+            <a href="mailto:aibanksolution@gmail.com" className="mail">
               <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <rect rx="2" y="4" x="2" height="16" width="20"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
-            </button>
+            </a>
             <div className="profile-pic">
               <img src={AshokImg} alt="Adv. Ashok Nair. K" />
             </div>
@@ -206,9 +206,9 @@ const AboutPage = () => {
             </div>
             <div className="bottom-bottom">
               <div className="social-links-container">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/analytical-investments/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               </div>
               <div className="contact-btn-wrapper">
                 <Link to="/contact" className="button">Contact Me</Link>
@@ -218,12 +218,12 @@ const AboutPage = () => {
 
           {/* Suresh Kumar P */}
           <div className="card">
-            <button className="mail">
+            <a href="mailto:aibanksolution@gmail.com" className="mail">
               <svg className="lucide lucide-mail" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                 <rect rx="2" y="4" x="2" height="16" width="20"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
-            </button>
+            </a>
             <div className="profile-pic">
               <img src={SureshImg} alt="Suresh Kumar P" />
             </div>
@@ -238,9 +238,9 @@ const AboutPage = () => {
             </div>
             <div className="bottom-bottom">
               <div className="social-links-container">
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/analytical-investments/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/analyticalinvestment" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/analyticalinvestments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               </div>
               <div className="contact-btn-wrapper">
                 <Link to="/contact" className="button">Contact Me</Link>
